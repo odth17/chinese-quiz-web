@@ -83,3 +83,6 @@ button:disabled {
 #home-button:hover {
   background-color: #e2e2e2;
 }
+#result {
+  white-space: pre-line;
+}
