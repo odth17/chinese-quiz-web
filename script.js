@@ -126,6 +126,7 @@ let currentQuestionIndex = 0;
 let score = 0;
 let shuffledQuizData = [];
 let currentMode = "meaning";
+let wrongAnswers = [];
 const questionCount = 10;
 
 function shuffleArray(array) {
@@ -134,8 +135,9 @@ function shuffleArray(array) {
 
 function startQuiz(mode) {
   currentMode = mode;
-  currentQuestionIndex = 0;
-  score = 0;
+currentQuestionIndex = 0;
+score = 0;
+wrongAnswers = [];
 
   shuffledQuizData = shuffleArray([...quizData]).slice(0, questionCount);
 
@@ -231,13 +233,22 @@ function checkAnswer(answer) {
   const result = document.getElementById("result");
 
   if (answer === correctAnswer) {
-    result.textContent = "정답입니다!";
-    result.style.color = "blue";
-    score++;
-  } else {
-    result.textContent = `오답입니다. 정답은 ${correctAnswer}입니다.`;
-    result.style.color = "red";
-  }
+  result.textContent = "정답입니다!";
+  result.style.color = "blue";
+  score++;
+} else {
+  result.textContent = `오답입니다. 정답은 ${correctAnswer}입니다.`;
+  result.style.color = "red";
+
+  wrongAnswers.push({
+    question: getQuestionText(currentQuestion),
+    selected: answer,
+    correct: correctAnswer,
+    chinese: currentQuestion.chinese,
+    pinyin: currentQuestion.pinyin,
+    meaning: currentQuestion.meaning
+  });
+}
 
   document.getElementById("score").textContent = `점수: ${score}`;
 
@@ -265,9 +276,24 @@ function showResult() {
   document.getElementById("question").textContent = "수고했어요!";
   document.getElementById("choices").innerHTML = "";
 
-  document.getElementById("result").textContent =
-    `총 ${shuffledQuizData.length}문제 중 ${score}문제를 맞혔습니다.`;
+  let resultText = `총 ${shuffledQuizData.length}문제 중 ${score}문제를 맞혔습니다.`;
 
+  if (wrongAnswers.length === 0) {
+    resultText += "\n\n완벽해요! 틀린 문제가 없습니다.";
+  } else {
+    resultText += "\n\n[오답노트]\n";
+
+    wrongAnswers.forEach((item, index) => {
+      resultText += `\n${index + 1}. 문제: ${item.question}`;
+      resultText += `\n내가 고른 답: ${item.selected}`;
+      resultText += `\n정답: ${item.correct}`;
+      resultText += `\n중국어: ${item.chinese}`;
+      resultText += `\n병음: ${item.pinyin}`;
+      resultText += `\n뜻: ${item.meaning}\n`;
+    });
+  }
+
+  document.getElementById("result").textContent = resultText;
   document.getElementById("result").style.color = "black";
 
   document.getElementById("score").textContent =
