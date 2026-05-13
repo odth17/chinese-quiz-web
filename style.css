@@ -74,3 +74,12 @@ button:disabled {
   opacity: 0.6;
   cursor: not-allowed;
 }
+#home-button {
+  margin: 12px auto 0;
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+#home-button:hover {
+  background-color: #e2e2e2;
+}
