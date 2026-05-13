@@ -10,17 +10,20 @@
   <div class="quiz-box">
     <h1>중국어 단어 퀴즈</h1>
 
+    <p id="progress">문제 1 / 5</p>
+
     <p class="question-title">문제</p>
     <h2 id="question">推荐</h2>
 
-    <div class="choices">
-      <button onclick="checkAnswer('추천하다')">추천하다</button>
-      <button onclick="checkAnswer('메뉴')">메뉴</button>
-      <button onclick="checkAnswer('담백하다')">담백하다</button>
-      <button onclick="checkAnswer('구매하다')">구매하다</button>
+    <div id="choices" class="choices">
+      <!-- 선택지는 JavaScript가 자동으로 넣어줌 -->
     </div>
 
     <p id="result"></p>
+
+    <button id="next-button" onclick="nextQuestion()">다음 문제</button>
+
+    <p id="score">점수: 0</p>
   </div>
 
   <script src="script.js"></script>
