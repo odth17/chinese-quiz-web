@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>중국어 단어 퀴즈</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="quiz-box">
+    <h1>중국어 단어 퀴즈</h1>
+
+    <p class="question-title">문제</p>
+    <h2 id="question">推荐</h2>
+
+    <div class="choices">
+      <button onclick="checkAnswer('추천하다')">추천하다</button>
+      <button onclick="checkAnswer('메뉴')">메뉴</button>
+      <button onclick="checkAnswer('담백하다')">담백하다</button>
+      <button onclick="checkAnswer('구매하다')">구매하다</button>
+    </div>
+
+    <p id="result"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
