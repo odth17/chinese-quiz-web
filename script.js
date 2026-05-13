@@ -122,7 +122,6 @@ const quizData = [
   { chinese: "豆浆", pinyin: "dòujiāng", meaning: "더우장, 콩 음료" },
   { chinese: "油条", pinyin: "yóutiáo", meaning: "여우탸오, 기름에 튀긴 음식" }
 ];
-function startQuiz(mode) {
 let currentQuestionIndex = 0;
 let score = 0;
 let shuffledQuizData = [];
@@ -147,6 +146,7 @@ function startQuiz(mode) {
   document.getElementById("next-button").textContent = "다음 문제";
   document.getElementById("next-button").onclick = nextQuestion;
   document.getElementById("next-button").style.display = "none";
+  document.getElementById("home-button").style.display = "block";
 
   showQuestion();
 }
@@ -278,10 +278,10 @@ function showResult() {
   nextButton.style.display = "block";
 
   nextButton.onclick = function () {
-    document.getElementById("quiz-area").style.display = "none";
-    document.getElementById("mode-box").style.display = "block";
+    goHome();
   };
 }
+
 function goHome() {
   document.getElementById("quiz-area").style.display = "none";
   document.getElementById("mode-box").style.display = "block";
@@ -289,6 +289,10 @@ function goHome() {
   document.getElementById("result").textContent = "";
   document.getElementById("choices").innerHTML = "";
   document.getElementById("score").textContent = "점수: 0";
+
+  document.getElementById("next-button").textContent = "다음 문제";
+  document.getElementById("next-button").onclick = nextQuestion;
+  document.getElementById("next-button").style.display = "none";
 
   currentQuestionIndex = 0;
   score = 0;
