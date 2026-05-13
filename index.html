@@ -2,28 +2,36 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>중국어 단어 퀴즈</title>
+  <title>중국어 기말 단어 퀴즈</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <div class="quiz-box">
-    <h1>중국어 단어 퀴즈</h1>
+    <h1>중국어 기말 단어 퀴즈</h1>
 
-    <p id="progress">문제 1 / 5</p>
+    <div id="mode-box">
+      <p class="question-title">퀴즈 모드를 선택하세요</p>
 
-    <p class="question-title">문제</p>
-    <h2 id="question">推荐</h2>
-
-    <div id="choices" class="choices">
-      <!-- 선택지는 JavaScript가 자동으로 넣어줌 -->
+      <button onclick="startQuiz('meaning')">중국어 보고 뜻 맞추기</button>
+      <button onclick="startQuiz('pinyin')">중국어 보고 병음 맞추기</button>
+      <button onclick="startQuiz('chinese')">뜻 보고 중국어 맞추기</button>
     </div>
 
-    <p id="result"></p>
+    <div id="quiz-area" style="display: none;">
+      <p id="progress">문제 1 / 10</p>
 
-    <button id="next-button" onclick="nextQuestion()">다음 문제</button>
+      <p class="question-title" id="mode-title">문제</p>
+      <h2 id="question">推荐</h2>
 
-    <p id="score">점수: 0</p>
+      <div id="choices" class="choices"></div>
+
+      <p id="result"></p>
+
+      <button id="next-button" onclick="nextQuestion()">다음 문제</button>
+
+      <p id="score">점수: 0</p>
+    </div>
   </div>
 
   <script src="script.js"></script>
