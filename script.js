@@ -122,6 +122,7 @@ const quizData = [
   { chinese: "豆浆", pinyin: "dòujiāng", meaning: "더우장, 콩 음료" },
   { chinese: "油条", pinyin: "yóutiáo", meaning: "여우탸오, 기름에 튀긴 음식" }
 ];
+function startQuiz(mode) {
 let currentQuestionIndex = 0;
 let score = 0;
 let shuffledQuizData = [];
