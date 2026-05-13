@@ -282,3 +282,15 @@ function showResult() {
     document.getElementById("mode-box").style.display = "block";
   };
 }
+function goHome() {
+  document.getElementById("quiz-area").style.display = "none";
+  document.getElementById("mode-box").style.display = "block";
+
+  document.getElementById("result").textContent = "";
+  document.getElementById("choices").innerHTML = "";
+  document.getElementById("score").textContent = "점수: 0";
+
+  currentQuestionIndex = 0;
+  score = 0;
+  shuffledQuizData = [];
+}
