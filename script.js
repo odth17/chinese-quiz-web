@@ -122,3 +122,162 @@ const quizData = [
   { chinese: "豆浆", pinyin: "dòujiāng", meaning: "더우장, 콩 음료" },
   { chinese: "油条", pinyin: "yóutiáo", meaning: "여우탸오, 기름에 튀긴 음식" }
 ];
+let currentQuestionIndex = 0;
+let score = 0;
+let shuffledQuizData = [];
+let currentMode = "meaning";
+const questionCount = 10;
+
+function shuffleArray(array) {
+  return array.sort(() => Math.random() - 0.5);
+}
+
+function startQuiz(mode) {
+  currentMode = mode;
+  currentQuestionIndex = 0;
+  score = 0;
+
+  shuffledQuizData = shuffleArray([...quizData]).slice(0, questionCount);
+
+  document.getElementById("mode-box").style.display = "none";
+  document.getElementById("quiz-area").style.display = "block";
+
+  document.getElementById("score").textContent = "점수: 0";
+  document.getElementById("next-button").textContent = "다음 문제";
+  document.getElementById("next-button").onclick = nextQuestion;
+  document.getElementById("next-button").style.display = "none";
+
+  showQuestion();
+}
+
+function getQuestionText(question) {
+  if (currentMode === "meaning") {
+    document.getElementById("mode-title").textContent = "중국어 단어의 뜻은?";
+    return question.chinese;
+  }
+
+  if (currentMode === "pinyin") {
+    document.getElementById("mode-title").textContent = "중국어 단어의 병음은?";
+    return question.chinese;
+  }
+
+  if (currentMode === "chinese") {
+    document.getElementById("mode-title").textContent = "이 뜻에 해당하는 중국어는?";
+    return question.meaning;
+  }
+}
+
+function getAnswerKey() {
+  if (currentMode === "meaning") {
+    return "meaning";
+  }
+
+  if (currentMode === "pinyin") {
+    return "pinyin";
+  }
+
+  if (currentMode === "chinese") {
+    return "chinese";
+  }
+}
+
+function showQuestion() {
+  const currentQuestion = shuffledQuizData[currentQuestionIndex];
+  const answerKey = getAnswerKey();
+
+  document.getElementById("progress").textContent =
+    `문제 ${currentQuestionIndex + 1} / ${shuffledQuizData.length}`;
+
+  document.getElementById("question").textContent = getQuestionText(currentQuestion);
+  document.getElementById("result").textContent = "";
+  document.getElementById("next-button").style.display = "none";
+
+  const choicesDiv = document.getElementById("choices");
+  choicesDiv.innerHTML = "";
+
+  const choices = makeChoices(currentQuestion, answerKey);
+
+  choices.forEach(choice => {
+    const button = document.createElement("button");
+    button.textContent = choice;
+
+    button.onclick = function () {
+      checkAnswer(choice);
+    };
+
+    choicesDiv.appendChild(button);
+  });
+}
+
+function makeChoices(correctQuestion, answerKey) {
+  let choices = [correctQuestion[answerKey]];
+
+  const wrongChoices = quizData
+    .filter(item => item[answerKey] !== correctQuestion[answerKey])
+    .map(item => item[answerKey]);
+
+  const randomWrongChoices = shuffleArray(wrongChoices).slice(0, 3);
+
+  choices = choices.concat(randomWrongChoices);
+
+  return shuffleArray(choices);
+}
+
+function checkAnswer(answer) {
+  const currentQuestion = shuffledQuizData[currentQuestionIndex];
+  const answerKey = getAnswerKey();
+  const correctAnswer = currentQuestion[answerKey];
+  const result = document.getElementById("result");
+
+  if (answer === correctAnswer) {
+    result.textContent = "정답입니다!";
+    result.style.color = "blue";
+    score++;
+  } else {
+    result.textContent = `오답입니다. 정답은 ${correctAnswer}입니다.`;
+    result.style.color = "red";
+  }
+
+  document.getElementById("score").textContent = `점수: ${score}`;
+
+  const buttons = document.querySelectorAll("#choices button");
+  buttons.forEach(button => {
+    button.disabled = true;
+  });
+
+  document.getElementById("next-button").style.display = "block";
+}
+
+function nextQuestion() {
+  currentQuestionIndex++;
+
+  if (currentQuestionIndex < shuffledQuizData.length) {
+    showQuestion();
+  } else {
+    showResult();
+  }
+}
+
+function showResult() {
+  document.getElementById("progress").textContent = "퀴즈 완료!";
+  document.getElementById("mode-title").textContent = "결과";
+  document.getElementById("question").textContent = "수고했어요!";
+  document.getElementById("choices").innerHTML = "";
+
+  document.getElementById("result").textContent =
+    `총 ${shuffledQuizData.length}문제 중 ${score}문제를 맞혔습니다.`;
+
+  document.getElementById("result").style.color = "black";
+
+  document.getElementById("score").textContent =
+    `최종 점수: ${score} / ${shuffledQuizData.length}`;
+
+  const nextButton = document.getElementById("next-button");
+  nextButton.textContent = "처음으로";
+  nextButton.style.display = "block";
+
+  nextButton.onclick = function () {
+    document.getElementById("quiz-area").style.display = "none";
+    document.getElementById("mode-box").style.display = "block";
+  };
+}
