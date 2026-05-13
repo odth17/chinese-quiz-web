@@ -294,4 +294,3 @@ function goHome() {
   score = 0;
   shuffledQuizData = [];
 }
-// home button fixed
