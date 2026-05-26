@@ -150,6 +150,7 @@ const quizData = [
     meaning: "이 요리는 맛있고 특히 입에 잘 맞는다."
   }
 ];
+
 let currentQuestionIndex = 0;
 let score = 0;
 let shuffledQuizData = [];
