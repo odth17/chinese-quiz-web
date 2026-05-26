@@ -262,7 +262,9 @@ function makeChoices(correctQuestion, answerKey) {
 
   let dataSource;
 
-  if (currentMode === "sentenceMeaning" || currentMode === "sentenceChinese") {
+  const isSentenceQuestion = sentenceData.includes(correctQuestion);
+
+  if (isSentenceQuestion) {
     dataSource = sentenceData;
   } else {
     dataSource = quizData;
