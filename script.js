@@ -121,6 +121,8 @@ const quizData = [
   { chinese: "果汁", pinyin: "guǒzhī", meaning: "과일 주스" },
   { chinese: "豆浆", pinyin: "dòujiāng", meaning: "더우장, 콩 음료" },
   { chinese: "油条", pinyin: "yóutiáo", meaning: "여우탸오, 기름에 튀긴 음식" }
+  ];
+
   const sentenceData = [
   {
     chinese: "我喜欢吃清淡的菜。",
