@@ -121,6 +121,32 @@ const quizData = [
   { chinese: "果汁", pinyin: "guǒzhī", meaning: "과일 주스" },
   { chinese: "豆浆", pinyin: "dòujiāng", meaning: "더우장, 콩 음료" },
   { chinese: "油条", pinyin: "yóutiáo", meaning: "여우탸오, 기름에 튀긴 음식" }
+  const sentenceData = [
+  {
+    chinese: "我喜欢吃清淡的菜。",
+    pinyin: "Wǒ xǐhuan chī qīngdàn de cài.",
+    meaning: "나는 담백한 음식을 좋아한다."
+  },
+  {
+    chinese: "老师推荐了一本书。",
+    pinyin: "Lǎoshī tuījiàn le yì běn shū.",
+    meaning: "선생님이 책 한 권을 추천했다."
+  },
+  {
+    chinese: "服务员把菜单拿来了。",
+    pinyin: "Fúwùyuán bǎ càidān ná lái le.",
+    meaning: "종업원이 메뉴를 가져왔다."
+  },
+  {
+    chinese: "我们明天去市场采购食材。",
+    pinyin: "Wǒmen míngtiān qù shìchǎng cǎigòu shícái.",
+    meaning: "우리는 내일 시장에 가서 식재료를 구매한다."
+  },
+  {
+    chinese: "这道菜很好吃，特别可口。",
+    pinyin: "Zhè dào cài hěn hǎochī, tèbié kěkǒu.",
+    meaning: "이 요리는 맛있고 특히 입에 잘 맞는다."
+  }
 ];
 let currentQuestionIndex = 0;
 let score = 0;
@@ -168,8 +194,17 @@ function getQuestionText(question) {
     document.getElementById("mode-title").textContent = "이 뜻에 해당하는 중국어는?";
     return question.meaning;
   }
-}
 
+  if (currentMode === "sentenceMeaning") {
+    document.getElementById("mode-title").textContent = "중국어 문장의 해석은?";
+    return question.chinese;
+  }
+
+  if (currentMode === "sentenceChinese") {
+    document.getElementById("mode-title").textContent = "이 해석에 해당하는 중국어 문장은?";
+    return question.meaning;
+  }
+}
 function getAnswerKey() {
   if (currentMode === "meaning") {
     return "meaning";
@@ -182,8 +217,15 @@ function getAnswerKey() {
   if (currentMode === "chinese") {
     return "chinese";
   }
-}
 
+  if (currentMode === "sentenceMeaning") {
+    return "meaning";
+  }
+
+  if (currentMode === "sentenceChinese") {
+    return "chinese";
+  }
+}
 function showQuestion() {
   const currentQuestion = shuffledQuizData[currentQuestionIndex];
   const answerKey = getAnswerKey();
@@ -323,4 +365,23 @@ function goHome() {
   currentQuestionIndex = 0;
   score = 0;
   shuffledQuizData = [];
+}
+function startSentenceQuiz(mode) {
+  currentMode = mode;
+  currentQuestionIndex = 0;
+  score = 0;
+  wrongAnswers = [];
+
+  shuffledQuizData = shuffleArray([...sentenceData]).slice(0, Math.min(questionCount, sentenceData.length));
+
+  document.getElementById("mode-box").style.display = "none";
+  document.getElementById("quiz-area").style.display = "block";
+
+  document.getElementById("score").textContent = "점수: 0";
+  document.getElementById("next-button").textContent = "다음 문제";
+  document.getElementById("next-button").onclick = nextQuestion;
+  document.getElementById("next-button").style.display = "none";
+  document.getElementById("home-button").style.display = "block";
+
+  showQuestion();
 }
