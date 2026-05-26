@@ -260,7 +260,15 @@ function showQuestion() {
 function makeChoices(correctQuestion, answerKey) {
   let choices = [correctQuestion[answerKey]];
 
-  const wrongChoices = quizData
+  let dataSource;
+
+  if (currentMode === "sentenceMeaning" || currentMode === "sentenceChinese") {
+    dataSource = sentenceData;
+  } else {
+    dataSource = quizData;
+  }
+
+  const wrongChoices = dataSource
     .filter(item => item[answerKey] !== correctQuestion[answerKey])
     .map(item => item[answerKey]);
 
