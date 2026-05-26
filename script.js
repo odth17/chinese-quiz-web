@@ -406,7 +406,7 @@ let score = 0;
 let shuffledQuizData = [];
 let currentMode = "meaning";
 let wrongAnswers = [];
-const questionCount = 10;
+const questionCount = 15;
 
 function shuffleArray(array) {
   return array.sort(() => Math.random() - 0.5);
