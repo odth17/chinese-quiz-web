@@ -123,31 +123,281 @@ const quizData = [
   { chinese: "油条", pinyin: "yóutiáo", meaning: "여우탸오, 기름에 튀긴 음식" }
   ];
 
-  const sentenceData = [
+ const sentenceData = [
   {
-    chinese: "我喜欢吃清淡的菜。",
-    pinyin: "Wǒ xǐhuan chī qīngdàn de cài.",
-    meaning: "나는 담백한 음식을 좋아한다."
+    chinese: "你今天怎么也回来晚了?",
+    pinyin: "Nǐ jīntiān zěnme yě huílai wǎn le?",
+    meaning: "당신 오늘 왜 이렇게 늦게 돌아왔어요?"
   },
   {
-    chinese: "老师推荐了一本书。",
-    pinyin: "Lǎoshī tuījiàn le yì běn shū.",
-    meaning: "선생님이 책 한 권을 추천했다."
+    chinese: "我来跟你一起做饭吧。",
+    pinyin: "Wǒ lái gēn nǐ yìqǐ zuòfàn ba.",
+    meaning: "내가 같이 식사 준비할게요."
   },
   {
-    chinese: "服务员把菜单拿来了。",
-    pinyin: "Fúwùyuán bǎ càidān ná lái le.",
-    meaning: "종업원이 메뉴를 가져왔다."
+    chinese: "回来得并不晚，到楼上张师傅家坐了会儿。",
+    pinyin: "Huílai de bìng bù wǎn, dào lóushàng Zhāng shīfu jiā zuò le huìr.",
+    meaning: "전혀 늦지 않게 왔는데, 윗층 장 사부님 댁에 잠깐 앉아 있다 왔어요."
   },
   {
-    chinese: "我们明天去市场采购食材。",
-    pinyin: "Wǒmen míngtiān qù shìchǎng cǎigòu shícái.",
-    meaning: "우리는 내일 시장에 가서 식재료를 구매한다."
+    chinese: "他们家又吵架了。",
+    pinyin: "Tāmen jiā yòu chǎojià le.",
+    meaning: "그 집 또 싸웠어요."
   },
   {
-    chinese: "这道菜很好吃，特别可口。",
-    pinyin: "Zhè dào cài hěn hǎochī, tèbié kěkǒu.",
-    meaning: "이 요리는 맛있고 특히 입에 잘 맞는다."
+    chinese: "他们为什么又吵了?",
+    pinyin: "Tāmen wèishénme yòu chǎo le?",
+    meaning: "왜 또 싸웠대요?"
+  },
+  {
+    chinese: "张师傅一回家就躺在沙发上，边看电视边抽烟。",
+    pinyin: "Zhāng shīfu yì huí jiā jiù tǎng zài shāfā shàng, biān kàn diànshì biān chōuyān.",
+    meaning: "장 씨는 집에 오자마자 소파에 누워 TV를 보면서 담배를 펴요."
+  },
+  {
+    chinese: "他爱人下了班，又洗菜又做饭。",
+    pinyin: "Tā àiren xià le bān, yòu xǐ cài yòu zuòfàn.",
+    meaning: "그의 부인은 퇴근하고 와서 채소도 씻고 밥도 해요."
+  },
+  {
+    chinese: "张师傅一点儿忙也不帮。",
+    pinyin: "Zhāng shīfu yìdiǎnr máng yě bù bāng.",
+    meaning: "장 씨는 조금도 도와주지 않아요."
+  },
+  {
+    chinese: "这就是张师傅不对了。",
+    pinyin: "Zhè jiù shì Zhāng shīfu bú duì le.",
+    meaning: "이건 장 씨가 잘못했네요."
+  },
+  {
+    chinese: "两个人都上了一天的班，都挺累的，回到家，怎么能光让一个人干活儿呢?",
+    pinyin: "Liǎng ge rén dōu shàng le yì tiān de bān, dōu tǐng lèi de, huí dào jiā, zěnme néng guāng ràng yí ge rén gàn huór ne?",
+    meaning: "두 사람 다 하루 종일 일해서 피곤할 텐데, 집에 돌아와서 어떻게 한 사람만 일하게 할 수 있겠어요?"
+  },
+  {
+    chinese: "他爱人叫张师傅帮着一起做，张师傅不做，结果把他爱人气哭了。",
+    pinyin: "Tā àiren jiào Zhāng shīfu bāngzhe yìqǐ zuò, Zhāng shīfu bú zuò, jiéguǒ bǎ tā àiren qì kū le.",
+    meaning: "아내가 장 씨에게 같이 하자고 했는데 장 씨가 안 해서, 결국 아내를 화나게 해서 울렸어요."
+  },
+  {
+    chinese: "现在两个人怎么样了?",
+    pinyin: "Xiànzài liǎng ge rén zěnmeyàng le?",
+    meaning: "지금 두 사람은 어때요?"
+  },
+  {
+    chinese: "我批评了张师傅，给他讲了男女在社会上要平等，在家庭中也要平等。",
+    pinyin: "Wǒ pīpíng le Zhāng shīfu, gěi tā jiǎng le nánnǚ zài shèhuì shàng yào píngděng, zài jiātíng zhōng yě yào píngděng.",
+    meaning: "내가 장 씨를 꾸짖고, 남녀는 사회에서도 평등해야 하고 가정에서도 평등해야 한다고 말해 줬어요."
+  },
+  {
+    chinese: "又把咱们俩的经验介绍了一下儿。",
+    pinyin: "Yòu bǎ zánmen liǎ de jīngyàn jièshào le yíxiàr.",
+    meaning: "그리고 우리 둘의 경험도 좀 소개해 줬어요."
+  },
+  {
+    chinese: "你没向他们夸夸我这个模范丈夫?",
+    pinyin: "Nǐ méi xiàng tāmen kuākua wǒ zhège mófàn zhàngfu?",
+    meaning: "당신, 그들에게 모범 남편인 나를 좀 칭찬하지 않았어요?"
+  },
+  {
+    chinese: "正因为我夸了你，张师傅才改变了态度，向他爱人认了错，两个人一起高高兴兴地做了一顿饭。",
+    pinyin: "Zhèng yīnwèi wǒ kuā le nǐ, Zhāng shīfu cái gǎibiàn le tàidu, xiàng tā àiren rèn le cuò, liǎng ge rén yìqǐ gāogāoxìngxìng de zuò le yí dùn fàn.",
+    meaning: "바로 내가 당신을 칭찬했기 때문에 장 씨가 태도를 바꾸고, 아내에게 잘못을 인정하고, 두 사람이 즐겁게 함께 한 끼를 만들었어요."
+  },
+  {
+    chinese: "希望他们俩今后再也不因为做家务的事吵架了。",
+    pinyin: "Xīwàng tāmen liǎ jīnhòu zàiyě bù yīnwèi zuò jiāwù de shì chǎojià le.",
+    meaning: "앞으로 그들이 다시는 집안일 하는 문제로 싸우지 않았으면 좋겠네요."
+  },
+  {
+    chinese: "你劝架劝得不错嘛!",
+    pinyin: "Nǐ quànjià quàn de búcuò ma!",
+    meaning: "당신 아주 중재를 잘했네요!"
+  },
+  {
+    chinese: "你把咱们俩刚结婚时我的表现也告诉他们了?",
+    pinyin: "Nǐ bǎ zánmen liǎ gāng jiéhūn shí wǒ de biǎoxiàn yě gàosu tāmen le?",
+    meaning: "당신, 우리가 막 결혼했을 때 내 모습도 그들에게 말해 줬어요?"
+  },
+  {
+    chinese: "不说那些，经验从哪儿说起呀?",
+    pinyin: "Bù shuō nàxiē, jīngyàn cóng nǎr shuō qǐ ya?",
+    meaning: "그런 걸 말하지 않으면 경험을 어디서부터 말하겠어요?"
+  },
+  {
+    chinese: "真不好意思，咱们俩的秘密全让人知道了。",
+    pinyin: "Zhēn bù hǎoyìsi, zánmen liǎ de mìmì quán ràng rén zhīdao le.",
+    meaning: "정말 부끄러워요, 우리 둘의 비밀이 다른 사람들에게 알려졌어요."
+  },
+  {
+    chinese: "我昨天睡了十个小时觉。",
+    pinyin: "Wǒ zuótiān shuì le shí ge xiǎoshí jiào.",
+    meaning: "나는 어제 잠을 열 시간 잤다."
+  },
+  {
+    chinese: "下班后他洗了澡。",
+    pinyin: "Xiàbān hòu tā xǐ le zǎo.",
+    meaning: "그는 퇴근 후에 샤워를 했다."
+  },
+  {
+    chinese: "今天我请你客。",
+    pinyin: "Jīntiān wǒ qǐng nǐ kè.",
+    meaning: "오늘은 내가 밥을 살게."
+  },
+  {
+    chinese: "我们要举行演讲比赛，帮我想想怎么讲。",
+    pinyin: "Wǒmen yào jǔxíng yǎnjiǎng bǐsài, bāng wǒ xiǎngxiang zěnme jiǎng.",
+    meaning: "우리 곧 웅변대회가 있는데, 내가 어떻게 말하면 좋을지 좀 생각해 줘."
+  },
+  {
+    chinese: "演讲的题目是什么?",
+    pinyin: "Yǎnjiǎng de tímù shì shénme?",
+    meaning: "연설 주제가 뭔데?"
+  },
+  {
+    chinese: "男女平等。",
+    pinyin: "Nánnǚ píngděng.",
+    meaning: "남녀평등."
+  },
+  {
+    chinese: "这个问题很复杂，内容又太多，不好讲，你肯定有困难。",
+    pinyin: "Zhège wèntí hěn fùzá, nèiróng yòu tài duō, bù hǎo jiǎng, nǐ kěndìng yǒu kùnnan.",
+    meaning: "이 문제는 아주 복잡하고 내용도 너무 많아서 말하기 쉽지 않겠네. 너 분명 어려움이 있겠다."
+  },
+  {
+    chinese: "所以才请你帮我想想嘛。",
+    pinyin: "Suǒyǐ cái qǐng nǐ bāng wǒ xiǎngxiang ma.",
+    meaning: "그러니까 네가 좀 생각해 달라고 하는 거지."
+  },
+  {
+    chinese: "我不知道从哪儿讲起。",
+    pinyin: "Wǒ bù zhīdao cóng nǎr jiǎng qǐ.",
+    meaning: "나는 어디서부터 말을 시작해야 할지 모르겠어."
+  },
+  {
+    chinese: "到处都有人谈男女平等，报上谈，电视里也谈。",
+    pinyin: "Dàochù dōu yǒu rén tán nánnǚ píngděng, bàoshàng tán, diànshì lǐ yě tán.",
+    meaning: "곳곳에서 남녀평등을 이야기해. 신문에서도 이야기하고, TV에서도 이야기하지."
+  },
+  {
+    chinese: "谈来谈去，连一个最简单的问题也没谈清楚。",
+    pinyin: "Tán lái tán qù, lián yí ge zuì jiǎndān de wèntí yě méi tán qīngchu.",
+    meaning: "이야기를 하고 또 해도 가장 간단한 문제조차 분명히 설명하지 못했어."
+  },
+  {
+    chinese: "什么问题?",
+    pinyin: "Shénme wèntí?",
+    meaning: "무슨 문제?"
+  },
+  {
+    chinese: "一般人都以为男人能做的事女人也能做，好像就是实现了男女平等了。",
+    pinyin: "Yìbān rén dōu yǐwéi nánrén néng zuò de shì nǚrén yě néng zuò, hǎoxiàng jiù shì shíxiàn le nánnǚ píngděng le.",
+    meaning: "보통 사람들은 남자가 할 수 있는 일을 여자도 할 수 있으면, 마치 그게 곧 남녀평등이 실현된 것처럼 생각해."
+  },
+  {
+    chinese: "你怎么认为呢?",
+    pinyin: "Nǐ zěnme rènwéi ne?",
+    meaning: "너는 어떻게 생각해?"
+  },
+  {
+    chinese: "男人有男人的特点，女人有女人的特点，只在一点上讨论，那就太简单了。",
+    pinyin: "Nánrén yǒu nánrén de tèdiǎn, nǚrén yǒu nǚrén de tèdiǎn, zhǐ zài yì diǎn shàng tǎolùn, nà jiù tài jiǎndān le.",
+    meaning: "남자는 남자의 특징이 있고 여자는 여자의 특징이 있는데, 한 가지 점만 놓고 토론하는 건 너무 단순한 거야."
+  },
+  {
+    chinese: "找来找去，没找到。",
+    pinyin: "Zhǎo lái zhǎo qù, méi zhǎodào.",
+    meaning: "이리저리 찾아도 찾지 못했다."
+  },
+  {
+    chinese: "商量来商量去，他也不同意。",
+    pinyin: "Shāngliang lái shāngliang qù, tā yě bù tóngyì.",
+    meaning: "의논하고 또 해봐도 그는 역시 동의하지 않았다."
+  },
+  {
+    chinese: "想来想去，怎么也想不起他叫什么名字。",
+    pinyin: "Xiǎng lái xiǎng qù, zěnme yě xiǎng bu qǐ tā jiào shénme míngzi.",
+    meaning: "생각하고 또 해봤지만, 어떻게 해도 그의 이름이 떠오르지 않는다."
+  },
+  {
+    chinese: "他说来说去都是自己夸自己。",
+    pinyin: "Tā shuō lái shuō qù dōu shì zìjǐ kuā zìjǐ.",
+    meaning: "그는 이 말 저 말을 하지만 모두 다 자기 자랑이다."
+  },
+  {
+    chinese: "今天他没来，我以为是他病了，后来才知道是他孩子病了。",
+    pinyin: "Jīntiān tā méi lái, wǒ yǐwéi shì tā bìng le, hòulái cái zhīdao shì tā háizi bìng le.",
+    meaning: "오늘 그가 오지 않아서 나는 그가 아픈 거라고 생각했는데, 나중에 알고 보니 그의 아이가 병이 났던 것이었다."
+  },
+  {
+    chinese: "张师傅回到家一点活儿都不干，大家都认为这是不对的。",
+    pinyin: "Zhāng shīfu huí dào jiā yìdiǎn huór dōu bù gàn, dàjiā dōu rènwéi zhè shì bú duì de.",
+    meaning: "장 씨는 집에 돌아와서 일을 조금도 하지 않아서, 모두가 이것은 잘못이라고 생각한다."
+  },
+  {
+    chinese: "今天路上车很多，我以为他不回来。",
+    pinyin: "Jīntiān lùshang chē hěn duō, wǒ yǐwéi tā bù huílai.",
+    meaning: "오늘 길에 차가 많아서 나는 그가 안 올 것이라고 생각했다."
+  },
+  {
+    chinese: "孩子改不了爱吃糖的习惯，结果牙都坏了。",
+    pinyin: "Háizi gǎi bù liǎo ài chī táng de xíguàn, jiéguǒ yá dōu huài le.",
+    meaning: "아이가 단 것을 좋아하는 습관을 고치지 못해서 결국 이가 다 상했다."
+  },
+  {
+    chinese: "他把约会的时间记错了，结果女朋友生气了。",
+    pinyin: "Tā bǎ yuēhuì de shíjiān jì cuò le, jiéguǒ nǚpéngyou shēngqì le.",
+    meaning: "그는 약속 시간을 잘못 기억해서 결국 여자친구가 화가 났다."
+  },
+  {
+    chinese: "住的要好，吃的也要好。",
+    pinyin: "Zhù de yào hǎo, chī de yě yào hǎo.",
+    meaning: "사는 것도 좋아야 하고, 먹는 것도 좋아야 한다."
+  },
+  {
+    chinese: "上班的路上要注意安全，下班的路上也要注意安全。",
+    pinyin: "Shàngbān de lùshang yào zhùyì ānquán, xiàbān de lùshang yě yào zhùyì ānquán.",
+    meaning: "출근길에도 안전에 주의해야 하고, 퇴근길에도 안전에 주의해야 한다."
+  },
+  {
+    chinese: "教室里边要安静，教室外边也要安静。",
+    pinyin: "Jiàoshì lǐbian yào ānjìng, jiàoshì wàibian yě yào ānjìng.",
+    meaning: "교실 안도 조용해야 하고, 교실 밖도 조용해야 한다."
+  },
+  {
+    chinese: "看来看去，一个都不喜欢。",
+    pinyin: "Kàn lái kàn qù, yí ge dōu bù xǐhuan.",
+    meaning: "보고 또 봐도 하나도 마음에 들지 않는다."
+  },
+  {
+    chinese: "走来走去，又走回来了。",
+    pinyin: "Zǒu lái zǒu qù, yòu zǒu huílai le.",
+    meaning: "왔다 갔다 하다가 다시 돌아왔다."
+  },
+  {
+    chinese: "讨论来讨论去，也没有好主意。",
+    pinyin: "Tǎolùn lái tǎolùn qù, yě méiyǒu hǎo zhǔyi.",
+    meaning: "토론하고 또 토론해도 좋은 생각이 없었다."
+  },
+  {
+    chinese: "连他的名字也没想起来。",
+    pinyin: "Lián tā de míngzi yě méi xiǎng qǐlai.",
+    meaning: "그의 이름조차도 떠올리지 못했다."
+  },
+  {
+    chinese: "连东南西北也不知道。",
+    pinyin: "Lián dōng nán xī běi yě bù zhīdao.",
+    meaning: "동서남북조차도 모른다."
+  },
+  {
+    chinese: "连图书馆也没去过。",
+    pinyin: "Lián túshūguǎn yě méi qù guo.",
+    meaning: "도서관조차도 가 본 적이 없다."
+  },
+  {
+    chinese: "我想找个干净勤劳的伴侣。",
+    pinyin: "Wǒ xiǎng zhǎo ge gānjìng qínláo de bànlǚ.",
+    meaning: "나는 깔끔하고 부지런한 배우자를 찾고 싶다."
   }
 ];
 
