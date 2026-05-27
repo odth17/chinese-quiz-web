@@ -453,6 +453,390 @@ const sentenceData = [
     pinyin: "Wǒ xiǎng zhǎo ge gānjìng qínláo de bànlǚ.",
     meaning: "나는 깔끔하고 부지런한 배우자를 찾고 싶다.",
     words: ["我", "想", "找", "个", "干净", "勤劳的", "伴侣"]
+  },
+    {
+    chinese: "我是来找工作的。",
+    pinyin: "Wǒ shì lái zhǎo gōngzuò de.",
+    meaning: "저는 일자리를 구하러 왔습니다.",
+    words: ["我", "是", "来", "找工作", "的"]
+  },
+  {
+    chinese: "喂，您好！麻烦您帮我叫一下儿刘山。",
+    pinyin: "Wéi, nínhǎo! Máfan nín bāng wǒ jiào yíxiàr Liú Shān.",
+    meaning: "여보세요, 안녕하세요! 실례지만 리우샨 씨를 좀 바꿔 주세요.",
+    words: ["喂", "您好", "麻烦", "您", "帮", "我", "叫一下儿", "刘山"]
+  },
+  {
+    chinese: "他早就不在这儿干了。",
+    pinyin: "Tā zǎo jiù bú zài zhèr gàn le.",
+    meaning: "그는 진작에 여기에서 일하지 않았어요.",
+    words: ["他", "早就", "不", "在", "这儿", "干", "了"]
+  },
+  {
+    chinese: "他去哪儿了?",
+    pinyin: "Tā qù nǎr le?",
+    meaning: "그는 어디로 갔나요?",
+    words: ["他", "去", "哪儿", "了"]
+  },
+  {
+    chinese: "他开了一家电脑公司，自己当老板了。",
+    pinyin: "Tā kāi le yì jiā diànnǎo gōngsī, zìjǐ dāng lǎobǎn le.",
+    meaning: "그는 컴퓨터 회사를 차려서 본인이 사장이 되었어요.",
+    words: ["他", "开了", "一家", "电脑公司", "自己", "当", "老板", "了"]
+  },
+  {
+    chinese: "真没想到。",
+    pinyin: "Zhēn méi xiǎngdào.",
+    meaning: "정말 뜻밖이네요.",
+    words: ["真", "没", "想到"]
+  },
+  {
+    chinese: "您知道怎么和他联系吗?",
+    pinyin: "Nín zhīdao zěnme hé tā liánxì ma?",
+    meaning: "그와 어떻게 연락해야 하는지 아시나요?",
+    words: ["您", "知道", "怎么", "和", "他", "联系", "吗"]
+  },
+  {
+    chinese: "我给你他的手机号码好吧。",
+    pinyin: "Wǒ gěi nǐ tā de shǒujī hàomǎ hǎo ba.",
+    meaning: "그의 휴대전화 번호를 알려 드릴게요.",
+    words: ["我", "给", "你", "他的", "手机号码", "好", "吧"]
+  },
+  {
+    chinese: "他走以前留下的。",
+    pinyin: "Tā zǒu yǐqián liúxià de.",
+    meaning: "그가 떠나기 전에 남겨 둔 거예요.",
+    words: ["他", "走", "以前", "留下", "的"]
+  },
+  {
+    chinese: "您等一下儿，我拿纸和笔。",
+    pinyin: "Nín děng yíxiàr, wǒ ná zhǐ hé bǐ.",
+    meaning: "잠시만 기다려 주세요. 제가 종이와 펜을 가져올게요.",
+    words: ["您", "等一下儿", "我", "拿", "纸", "和", "笔"]
+  },
+  {
+    chinese: "好了，您说吧。",
+    pinyin: "Hǎo le, nín shuō ba.",
+    meaning: "됐습니다. 말씀하세요.",
+    words: ["好了", "您", "说", "吧"]
+  },
+  {
+    chinese: "记下来了吗?",
+    pinyin: "Jì xialai le ma?",
+    meaning: "받아 적으셨나요?",
+    words: ["记下来", "了", "吗"]
+  },
+  {
+    chinese: "记下来了，谢谢！",
+    pinyin: "Jì xialai le, xièxie!",
+    meaning: "다 적었어요. 감사합니다!",
+    words: ["记下来", "了", "谢谢"]
+  },
+  {
+    chinese: "请问，王经理在吗?",
+    pinyin: "Qǐngwèn, Wáng jīnglǐ zài ma?",
+    meaning: "실례하지만 왕 사장님 계신가요?",
+    words: ["请问", "王经理", "在", "吗"]
+  },
+  {
+    chinese: "有什么事?",
+    pinyin: "Yǒu shénme shì?",
+    meaning: "무슨 일이시죠?",
+    words: ["有", "什么", "事"]
+  },
+  {
+    chinese: "我是他的秘书。",
+    pinyin: "Wǒ shì tā de mìshū.",
+    meaning: "제가 그분의 비서입니다.",
+    words: ["我", "是", "他的", "秘书"]
+  },
+  {
+    chinese: "您好，我是来找工作的。",
+    pinyin: "Nínhǎo, wǒ shì lái zhǎo gōngzuò de.",
+    meaning: "안녕하세요. 저는 일자리를 구하러 왔습니다.",
+    words: ["您好", "我", "是", "来", "找工作", "的"]
+  },
+  {
+    chinese: "我看到报纸上有贵公司的广告。",
+    pinyin: "Wǒ kàndào bàozhǐ shàng yǒu guì gōngsī de guǎnggào.",
+    meaning: "신문에서 귀사의 광고를 봤습니다.",
+    words: ["我", "看到", "报纸上", "有", "贵公司的", "广告"]
+  },
+  {
+    chinese: "王经理陪客人参观去了。",
+    pinyin: "Wáng jīnglǐ péi kèrén cānguān qù le.",
+    meaning: "왕 사장님은 손님을 모시고 참관하러 가셨어요.",
+    words: ["王经理", "陪", "客人", "参观", "去", "了"]
+  },
+  {
+    chinese: "请先把您的简历给我一份。",
+    pinyin: "Qǐng xiān bǎ nín de jiǎnlì gěi wǒ yí fèn.",
+    meaning: "우선 저에게 이력서를 한 부 주세요.",
+    words: ["请", "先", "把", "您的", "简历", "给", "我", "一份"]
+  },
+  {
+    chinese: "您看这些够吗?",
+    pinyin: "Nín kàn zhèxiē gòu ma?",
+    meaning: "이 정도면 충분한가요?",
+    words: ["您", "看", "这些", "够", "吗"]
+  },
+  {
+    chinese: "有学历证明吗?",
+    pinyin: "Yǒu xuélì zhèngmíng ma?",
+    meaning: "학력 증명서가 있나요?",
+    words: ["有", "学历证明", "吗"]
+  },
+  {
+    chinese: "这是毕业证的复印件。",
+    pinyin: "Zhè shì bìyèzhèng de fùyìnjiàn.",
+    meaning: "이것은 졸업증서의 복사본입니다.",
+    words: ["这", "是", "毕业证的", "复印件"]
+  },
+  {
+    chinese: "经理一回来，我就交给他。",
+    pinyin: "Jīnglǐ yì huílai, wǒ jiù jiāo gěi tā.",
+    meaning: "사장님이 돌아오시면 바로 전해 드릴게요.",
+    words: ["经理", "一", "回来", "我", "就", "交给", "他"]
+  },
+  {
+    chinese: "什么时候面试请等我们的电话。",
+    pinyin: "Shénme shíhou miànshì qǐng děng wǒmen de diànhuà.",
+    meaning: "언제 면접을 볼지는 저희 전화를 기다려 주세요.",
+    words: ["什么时候", "面试", "请", "等", "我们的", "电话"]
+  },
+  {
+    chinese: "你为什么要做这份工作?",
+    pinyin: "Nǐ wèishénme yào zuò zhè fèn gōngzuò?",
+    meaning: "당신은 왜 이 일을 하려고 하나요?",
+    words: ["你", "为什么", "要", "做", "这份", "工作"]
+  },
+  {
+    chinese: "我对这份工作感兴趣。",
+    pinyin: "Wǒ duì zhè fèn gōngzuò gǎn xìngqù.",
+    meaning: "저는 이 일에 흥미가 있습니다.",
+    words: ["我", "对", "这份", "工作", "感兴趣"]
+  },
+  {
+    chinese: "现在电脑公司很多，你为什么想来我们公司?",
+    pinyin: "Xiànzài diànnǎo gōngsī hěn duō, nǐ wèishénme xiǎng lái wǒmen gōngsī?",
+    meaning: "지금 컴퓨터 회사가 아주 많은데, 왜 우리 회사에 오려고 하나요?",
+    words: ["现在", "电脑公司", "很多", "你", "为什么", "想", "来", "我们公司"]
+  },
+  {
+    chinese: "你们是一家新开的公司，发展很快。",
+    pinyin: "Nǐmen shì yì jiā xīn kāi de gōngsī, fāzhǎn hěn kuài.",
+    meaning: "귀사는 새로 시작한 회사이고, 발전이 매우 빠릅니다.",
+    words: ["你们", "是", "一家", "新开的", "公司", "发展", "很", "快"]
+  },
+  {
+    chinese: "我认为在这里工作有前途。",
+    pinyin: "Wǒ rènwéi zài zhèlǐ gōngzuò yǒu qiántú.",
+    meaning: "저는 이곳에서 일하는 것이 전망이 밝다고 생각합니다.",
+    words: ["我", "认为", "在", "这里", "工作", "有", "前途"]
+  },
+  {
+    chinese: "你说的有前途是什么意思?",
+    pinyin: "Nǐ shuō de yǒu qiántú shì shénme yìsi?",
+    meaning: "당신이 말한 전망이 밝다는 무슨 뜻인가요?",
+    words: ["你", "说的", "有前途", "是", "什么", "意思"]
+  },
+  {
+    chinese: "在工作中锻炼，提高工作能力和技术水平，也希望快点儿增加收入。",
+    pinyin: "Zài gōngzuò zhōng duànliàn, tígāo gōngzuò nénglì hé jìshù shuǐpíng, yě xīwàng kuài diǎnr zēngjiā shōurù.",
+    meaning: "일을 하면서 단련하고, 업무 능력과 기술 수준을 높일 수 있으며, 수입도 빨리 늘어나기를 바랍니다.",
+    words: ["在", "工作中", "锻炼", "提高", "工作能力", "和", "技术水平", "也", "希望", "快点儿", "增加", "收入"]
+  },
+  {
+    chinese: "我们这儿的工作很忙，有时候周末也不能休息。",
+    pinyin: "Wǒmen zhèr de gōngzuò hěn máng, yǒu shíhou zhōumò yě bù néng xiūxi.",
+    meaning: "우리 회사 일은 매우 바쁩니다. 어떤 때는 주말에도 쉬지 못합니다.",
+    words: ["我们这儿的", "工作", "很", "忙", "有时候", "周末", "也", "不能", "休息"]
+  },
+  {
+    chinese: "我很年轻，喜欢紧张的生活。",
+    pinyin: "Wǒ hěn niánqīng, xǐhuan jǐnzhāng de shēnghuó.",
+    meaning: "저는 아직 젊고, 바쁘고 긴장감 있는 생활을 좋아합니다.",
+    words: ["我", "很", "年轻", "喜欢", "紧张的", "生活"]
+  },
+  {
+    chinese: "我母亲常说，不忙不幸福。",
+    pinyin: "Wǒ mǔqīn cháng shuō, bù máng bù xìngfú.",
+    meaning: "제 어머니는 자주 바쁘지 않으면 행복하지 않다고 말씀하십니다.",
+    words: ["我母亲", "常", "说", "不忙", "不", "幸福"]
+  },
+  {
+    chinese: "我觉得她说得有道理。",
+    pinyin: "Wǒ juéde tā shuō de yǒu dàoli.",
+    meaning: "저는 어머니 말씀이 일리가 있다고 생각합니다.",
+    words: ["我", "觉得", "她", "说得", "有", "道理"]
+  },
+  {
+    chinese: "今天的面试就到这儿，结果怎么样请等我们的通知。",
+    pinyin: "Jīntiān de miànshì jiù dào zhèr, jiéguǒ zěnmeyàng qǐng děng wǒmen de tōngzhī.",
+    meaning: "오늘의 면접은 여기까지입니다. 결과가 어떨지는 저희의 통지를 기다려 주세요.",
+    words: ["今天的", "面试", "就", "到", "这儿", "结果", "怎么样", "请", "等", "我们的", "通知"]
+  },
+  {
+    chinese: "我们公司每年都招一些新职员。",
+    pinyin: "Wǒmen gōngsī měinián dōu zhāo yìxiē xīn zhíyuán.",
+    meaning: "우리 회사는 해마다 새 직원을 좀 모집합니다.",
+    words: ["我们公司", "每年", "都", "招", "一些", "新职员"]
+  },
+  {
+    chinese: "其中有不少中年人给我留下了很好的印象。",
+    pinyin: "Qízhōng yǒu bù shǎo zhōngniánrén gěi wǒ liúxià le hěn hǎo de yìnxiàng.",
+    meaning: "그중 적지 않은 중년 지원자가 제게 아주 좋은 인상을 남겼습니다.",
+    words: ["其中", "有", "不少", "中年人", "给", "我", "留下了", "很好的", "印象"]
+  },
+  {
+    chinese: "他们年龄比较大，都工作过一段时间。",
+    pinyin: "Tāmen niánlíng bǐjiào dà, dōu gōngzuò guo yí duàn shíjiān.",
+    meaning: "그분들은 나이가 비교적 많고 모두 어느 정도 일해 본 적이 있습니다.",
+    words: ["他们", "年龄", "比较", "大", "都", "工作过", "一段", "时间"]
+  },
+  {
+    chinese: "他们懂技术，有经验，能够很快熟悉工作。",
+    pinyin: "Tāmen dǒng jìshù, yǒu jīngyàn, nénggòu hěn kuài shúxī gōngzuò.",
+    meaning: "그들은 기술을 알고 경험이 있으며 일을 빨리 익힐 수 있습니다.",
+    words: ["他们", "懂", "技术", "有", "经验", "能够", "很快", "熟悉", "工作"]
+  },
+  {
+    chinese: "工作起来认真，负责，我对他们很满意。",
+    pinyin: "Gōngzuò qǐlai rènzhēn, fùzé, wǒ duì tāmen hěn mǎnyì.",
+    meaning: "일할 때 성실하고 책임감도 있어서 저는 그분들에게 매우 만족합니다.",
+    words: ["工作起来", "认真", "负责", "我", "对", "他们", "很", "满意"]
+  },
+  {
+    chinese: "当然，来面试的大学毕业生也不少。",
+    pinyin: "Dāngrán, lái miànshì de dàxué bìyèshēng yě bù shǎo.",
+    meaning: "물론 면접을 보러 오는 대학 졸업생들도 적지 않습니다.",
+    words: ["当然", "来", "面试的", "大学毕业生", "也", "不少"]
+  },
+  {
+    chinese: "有一些也成了我们的新职员。",
+    pinyin: "Yǒu yìxiē yě chéng le wǒmen de xīn zhíyuán.",
+    meaning: "그중 일부는 우리 회사의 신입 직원이 되었습니다.",
+    words: ["有", "一些", "也", "成了", "我们的", "新职员"]
+  },
+  {
+    chinese: "他们热情，爱学习，技术和能力都提高得很快。",
+    pinyin: "Tāmen rèqíng, ài xuéxí, jìshù hé nénglì dōu tígāo de hěn kuài.",
+    meaning: "그들은 열정적이고 배우기를 좋아하며 기술과 능력도 매우 빨리 향상됩니다.",
+    words: ["他们", "热情", "爱", "学习", "技术", "和", "能力", "都", "提高得", "很快"]
+  },
+  {
+    chinese: "我对他们也很满意。",
+    pinyin: "Wǒ duì tāmen yě hěn mǎnyì.",
+    meaning: "저는 그들에 대해서도 매우 만족합니다.",
+    words: ["我", "对", "他们", "也", "很", "满意"]
+  },
+  {
+    chinese: "我把你的手机号记下来。",
+    pinyin: "Wǒ bǎ nǐ de shǒujī hào jì xialai.",
+    meaning: "내가 너의 휴대전화 번호를 적어 둘게.",
+    words: ["我", "把", "你的", "手机号", "记下来"]
+  },
+  {
+    chinese: "新书发下来了。",
+    pinyin: "Xīn shū fā xialai le.",
+    meaning: "새 책이 배부되었다.",
+    words: ["新书", "发下来", "了"]
+  },
+  {
+    chinese: "我玩起来常常忘了时间。",
+    pinyin: "Wǒ wán qǐlai chángcháng wàng le shíjiān.",
+    meaning: "나는 놀다 보면 자주 시간을 잊는다.",
+    words: ["我", "玩起来", "常常", "忘了", "时间"]
+  },
+  {
+    chinese: "天气热起来了，夏天快到了。",
+    pinyin: "Tiānqì rè qǐlai le, xiàtiān kuài dào le.",
+    meaning: "날씨가 더워졌고, 여름이 곧 다가온다.",
+    words: ["天气", "热起来", "了", "夏天", "快", "到", "了"]
+  },
+  {
+    chinese: "我是昨天晚上刚到北京的。",
+    pinyin: "Wǒ shì zuótiān wǎnshang gāng dào Běijīng de.",
+    meaning: "나는 어젯밤에 막 베이징에 도착한 것이다.",
+    words: ["我", "是", "昨天晚上", "刚", "到", "北京", "的"]
+  },
+  {
+    chinese: "他们是从中国南方来的。",
+    pinyin: "Tāmen shì cóng Zhōngguó nánfāng lái de.",
+    meaning: "그들은 중국 남방에서 온 것이다.",
+    words: ["他们", "是", "从", "中国南方", "来", "的"]
+  },
+  {
+    chinese: "你们究竟是来干什么的呢?",
+    pinyin: "Nǐmen jiūjìng shì lái gàn shénme de ne?",
+    meaning: "너희들은 도대체 무엇을 하러 온 것이니?",
+    words: ["你们", "究竟", "是", "来", "干", "什么", "的", "呢"]
+  },
+  {
+    chinese: "不发达，我不回家。",
+    pinyin: "Bù fādá, wǒ bù huí jiā.",
+    meaning: "출세하지 않으면 집에 돌아가지 않겠다.",
+    words: ["不", "发达", "我", "不", "回家"]
+  },
+  {
+    chinese: "你今天不做作业不能出去玩儿。",
+    pinyin: "Nǐ jīntiān bù zuò zuòyè bù néng chūqù wánr.",
+    meaning: "너는 오늘 숙제를 하지 않으면 나가 놀 수 없다.",
+    words: ["你", "今天", "不", "做", "作业", "不能", "出去", "玩儿"]
+  },
+  {
+    chinese: "他们早就研究过这个问题了。",
+    pinyin: "Tāmen zǎo jiù yánjiū guo zhège wèntí le.",
+    meaning: "그들은 진작에 이 문제를 연구한 적이 있다.",
+    words: ["他们", "早就", "研究过", "这个", "问题", "了"]
+  },
+  {
+    chinese: "秘书早就把你的简历交给经理了。",
+    pinyin: "Mìshū zǎo jiù bǎ nǐ de jiǎnlì jiāo gěi jīnglǐ le.",
+    meaning: "비서는 진작에 너의 이력서를 사장에게 넘겼다.",
+    words: ["秘书", "早就", "把", "你的", "简历", "交给", "经理", "了"]
+  },
+  {
+    chinese: "我早就熟悉这儿的饭馆儿了。",
+    pinyin: "Wǒ zǎo jiù shúxī zhèr de fànguǎnr le.",
+    meaning: "나는 진작에 이곳의 음식점에 익숙해졌다.",
+    words: ["我", "早就", "熟悉", "这儿的", "饭馆儿", "了"]
+  },
+  {
+    chinese: "课文背下来了吗?",
+    pinyin: "Kèwén bèi xialai le ma?",
+    meaning: "본문 외웠니?",
+    words: ["课文", "背下来", "了", "吗"]
+  },
+  {
+    chinese: "她陪奶奶买东西去了。",
+    pinyin: "Tā péi nǎinai mǎi dōngxi qù le.",
+    meaning: "그녀는 할머니를 모시고 물건을 사러 갔다.",
+    words: ["她", "陪", "奶奶", "买", "东西", "去", "了"]
+  },
+  {
+    chinese: "他陪老师看病去了。",
+    pinyin: "Tā péi lǎoshī kàn bìng qù le.",
+    meaning: "그는 선생님을 모시고 병원에 갔다.",
+    words: ["他", "陪", "老师", "看病", "去", "了"]
+  },
+  {
+    chinese: "爸爸陪孩子换钱去了。",
+    pinyin: "Bàba péi háizi huàn qián qù le.",
+    meaning: "아빠는 아이를 데리고 환전하러 갔다.",
+    words: ["爸爸", "陪", "孩子", "换钱", "去", "了"]
+  },
+  {
+    chinese: "领导不负责不行。",
+    pinyin: "Lǐngdǎo bù fùzé bù xíng.",
+    meaning: "지도자가 책임감이 없으면 안 된다.",
+    words: ["领导", "不", "负责", "不", "行"]
+  },
+  {
+    chinese: "成绩不及格不发毕业证。",
+    pinyin: "Chéngjì bù jígé bù fā bìyèzhèng.",
+    meaning: "성적이 모자라면 졸업증서를 발급하지 않는다.",
+    words: ["成绩", "不", "及格", "不", "发", "毕业证"]
   }
 ];
 
