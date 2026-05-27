@@ -153,3 +153,12 @@ button:disabled {
   color: #666;
   margin-top: 10px;
 }
+#audio-button {
+  margin: 10px auto 20px;
+  background-color: #fff3cd;
+  color: #333;
+}
+
+#audio-button:hover {
+  background-color: #ffe69c;
+}
