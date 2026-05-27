@@ -1,5 +1,10 @@
 const quizData = [
-  { chinese: "沙发", pinyin: "shāfā", meaning: "소파" },
+ {
+  lesson: 8,
+  chinese: "沙发",
+  pinyin: "shāfā",
+  meaning: "소파"
+}
   { chinese: "抽", pinyin: "chōu", meaning: "(담배를) 피우다" },
   { chinese: "活儿", pinyin: "huór", meaning: "일" },
   { chinese: "气", pinyin: "qì", meaning: "성내다, 화내다" },
@@ -1837,6 +1842,31 @@ let currentMode = "meaning";
 let wrongAnswers = [];
 const questionCount = 15;
 const orderQuestionCount = 15;
+let selectedLessons = [8, 9, 10, 11, 12];
+
+function toggleLesson(lesson, button) {
+  const index = selectedLessons.indexOf(lesson);
+
+  if (index === -1) {
+    selectedLessons.push(lesson);
+    button.classList.add("selected");
+  } else {
+    selectedLessons.splice(index, 1);
+    button.classList.remove("selected");
+  }
+
+  const warning = document.getElementById("lesson-warning");
+
+  if (selectedLessons.length === 0) {
+    warning.textContent = "최소 한 과 이상 선택해야 해!";
+  } else {
+    warning.textContent = "선택된 범위: " + selectedLessons.sort((a, b) => a - b).map(n => n + "과").join(", ");
+  }
+}
+
+function filterByLesson(data) {
+  return data.filter(item => selectedLessons.includes(item.lesson));
+}
 
 function shuffleArray(array) {
   return array.sort(() => Math.random() - 0.5);
@@ -1848,7 +1878,14 @@ currentQuestionIndex = 0;
 score = 0;
 wrongAnswers = [];
 
-  shuffledQuizData = shuffleArray([...quizData]).slice(0, questionCount);
+  const filteredData = filterByLesson(quizData);
+
+if (selectedLessons.length === 0 || filteredData.length === 0) {
+  alert("출제 범위를 하나 이상 선택해줘!");
+  return;
+}
+
+shuffledQuizData = shuffleArray([...filteredData]).slice(0, Math.min(questionCount, filteredData.length));
 
   document.getElementById("mode-box").style.display = "none";
   document.getElementById("quiz-area").style.display = "block";
@@ -2071,7 +2108,14 @@ function startSentenceQuiz(mode) {
   score = 0;
   wrongAnswers = [];
 
-  shuffledQuizData = shuffleArray([...orderQuizData]).slice(0, Math.min(orderQuestionCount, orderQuizData.length));
+ const filteredData = filterByLesson(sentenceData);
+
+if (selectedLessons.length === 0 || filteredData.length === 0) {
+  alert("출제 범위를 하나 이상 선택해줘!");
+  return;
+}
+
+shuffledQuizData = shuffleArray([...filteredData]).slice(0, Math.min(questionCount, filteredData.length));
   document.getElementById("mode-box").style.display = "none";
   document.getElementById("quiz-area").style.display = "block";
 
@@ -2093,8 +2137,21 @@ function startOrderQuiz() {
   score = 0;
   wrongAnswers = [];
 
-  orderQuizData = sentenceData.filter(item => item.words && item.words.length > 0);
-  shuffledQuizData = shuffleArray([...orderQuizData]).slice(0, Math.min(questionCount, orderQuizData.length));
+ const filteredSentenceData = filterByLesson(sentenceData);
+
+if (selectedLessons.length === 0 || filteredSentenceData.length === 0) {
+  alert("출제 범위를 하나 이상 선택해줘!");
+  return;
+}
+
+orderQuizData = filteredSentenceData.filter(item => item.words && item.words.length > 0);
+
+if (orderQuizData.length === 0) {
+  alert("선택한 범위에 순서 배열 문제가 없어!");
+  return;
+}
+
+shuffledQuizData = shuffleArray([...orderQuizData]).slice(0, Math.min(orderQuestionCount, orderQuizData.length));
 
   document.getElementById("mode-box").style.display = "none";
   document.getElementById("quiz-area").style.display = "block";
