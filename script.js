@@ -2639,37 +2639,51 @@ function playCurrentAudio() {
     alert("읽을 중국어 문장이 없습니다.");
     return;
   }
-if (!textToRead) {
-  alert("읽을 중국어 문장이 없습니다.");
-  return;
-}
 
-window.speechSynthesis.cancel();
   window.speechSynthesis.cancel();
 
   const utterance = new SpeechSynthesisUtterance(textToRead);
   utterance.lang = "zh-CN";
-  utterance.rate = 0.8;
-  utterance.pitch = 1;
+  utterance.rate = 0.75;
+  utterance.pitch = 1.1;
+  utterance.volume = 1;
 
   const voices = window.speechSynthesis.getVoices();
 
-  const chineseVoice = voices.find(voice =>
-    voice.lang === "zh-CN" ||
-    voice.lang === "zh_CN" ||
-    voice.lang.startsWith("zh")
+  const preferredFemaleVoice = voices.find(voice => {
+    const name = voice.name.toLowerCase();
+    const lang = voice.lang.toLowerCase();
+
+    return (
+      lang.startsWith("zh") &&
+      (
+        name.includes("female") ||
+        name.includes("xiaoxiao") ||
+        name.includes("ting") ||
+        name.includes("ting-ting") ||
+        name.includes("meijia") ||
+        name.includes("mei-jia") ||
+        name.includes("sinji") ||
+        name.includes("google")
+      )
+    );
+  });
+
+  const anyChineseVoice = voices.find(voice =>
+    voice.lang && voice.lang.toLowerCase().startsWith("zh")
   );
 
-  if (chineseVoice) {
-    utterance.voice = chineseVoice;
+  if (preferredFemaleVoice) {
+    utterance.voice = preferredFemaleVoice;
+  } else if (anyChineseVoice) {
+    utterance.voice = anyChineseVoice;
   }
 
-  utterance.onerror = function (event) {
-    alert("음성 재생 오류가 났어: " + event.error);
-  };
-
-  window.speechSynthesis.speak(utterance);
+  setTimeout(() => {
+    window.speechSynthesis.speak(utterance);
+  }, 100);
 }
+
 window.speechSynthesis.onvoiceschanged = function () {
   window.speechSynthesis.getVoices();
 };
