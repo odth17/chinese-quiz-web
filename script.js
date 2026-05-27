@@ -2435,21 +2435,18 @@ function startSentenceQuiz(mode) {
   score = 0;
   wrongAnswers = [];
 
- const filteredData = filterByLesson(sentenceData);
+  const filteredData = filterByLesson(sentenceData);
 
-if (selectedLessons.length === 0 || filteredData.length === 0) {
-  alert("출제 범위를 하나 이상 선택해줘!");
-  return;
-}
+  if (selectedLessons.length === 0 || filteredData.length === 0) {
+    alert("출제 범위를 하나 이상 선택해줘!");
+    return;
+  }
 
-const filteredData = filterByLesson(sentenceData);
+  shuffledQuizData = shuffleArray([...filteredData]).slice(
+    0,
+    Math.min(questionCount, filteredData.length)
+  );
 
-if (selectedLessons.length === 0 || filteredData.length === 0) {
-  alert("출제 범위를 하나 이상 선택해줘!");
-  return;
-}
-
-shuffledQuizData = shuffleArray([...filteredData]).slice(0, Math.min(questionCount, filteredData.length));
   document.getElementById("mode-box").style.display = "none";
   document.getElementById("quiz-area").style.display = "block";
 
