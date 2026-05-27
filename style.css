@@ -89,3 +89,24 @@ button:disabled {
 #result {
   white-space: pre-line;
 }
+#selected-words {
+  background-color: #f7f7f7;
+  padding: 14px;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+#word-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+#word-buttons button {
+  width: auto;
+  min-width: 70px;
+  padding: 12px 16px;
+}
