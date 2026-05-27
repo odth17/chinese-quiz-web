@@ -690,32 +690,64 @@ function showOrderQuestion() {
 
   const mixedWords = shuffleArray([...currentOrderQuestion.words]);
 
-  mixedWords.forEach(word => {
-    const button = document.createElement("button");
-    button.textContent = word;
+ mixedWords.forEach((word, index) => {
+  const button = document.createElement("button");
+  button.textContent = word;
+  button.dataset.word = word;
+  button.dataset.index = index;
 
-    button.onclick = function () {
-      selectedWords.push(word);
-      button.disabled = true;
-      updateSelectedWords();
+  button.onclick = function () {
+    selectedWords.push({
+      word: word,
+      index: index
+    });
 
-      if (selectedWords.length === currentOrderQuestion.words.length) {
-        checkOrderAnswer();
-      }
-    };
+    button.disabled = true;
+    updateSelectedWords();
 
-    wordBox.appendChild(button);
-  });
+    if (selectedWords.length === currentOrderQuestion.words.length) {
+      checkOrderAnswer();
+    }
+  };
+
+  wordBox.appendChild(button);
+});
 }
 
 function updateSelectedWords() {
   const selectedBox = document.getElementById("selected-words");
-  selectedBox.textContent = "선택한 순서: " + selectedWords.join(" ");
+  selectedBox.innerHTML = "";
+
+  const title = document.createElement("p");
+  title.textContent = "선택한 순서:";
+  selectedBox.appendChild(title);
+
+  selectedWords.forEach((item, selectedIndex) => {
+    const selectedButton = document.createElement("button");
+    selectedButton.textContent = item.word;
+    selectedButton.className = "selected-word-button";
+
+    selectedButton.onclick = function () {
+      selectedWords.splice(selectedIndex, 1);
+
+      const originalButton = document.querySelector(
+        `#word-buttons button[data-index="${item.index}"]`
+      );
+
+      if (originalButton) {
+        originalButton.disabled = false;
+      }
+
+      updateSelectedWords();
+    };
+
+    selectedBox.appendChild(selectedButton);
+  });
 }
 
 function checkOrderAnswer() {
   const correctSentence = currentOrderQuestion.words.join("");
-  const userSentence = selectedWords.join("");
+  const userSentence = selectedWords.map(item => item.word).join("");
   const result = document.getElementById("result");
 
   if (userSentence === correctSentence) {
@@ -729,7 +761,7 @@ function checkOrderAnswer() {
 
     wrongAnswers.push({
       question: currentOrderQuestion.meaning,
-      selected: selectedWords.join(" "),
+      selected: selectedWords.map(item => item.word).join(" "),
       correct: currentOrderQuestion.chinese,
       chinese: currentOrderQuestion.chinese,
       pinyin: currentOrderQuestion.pinyin,
