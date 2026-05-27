@@ -127,3 +127,29 @@ button:disabled {
 .selected-word-button:hover {
   background-color: #c8edcc;
 }
+#lesson-box {
+  margin-bottom: 24px;
+  padding: 15px;
+  background-color: #f8f9ff;
+  border-radius: 15px;
+}
+
+.lesson-button {
+  width: auto;
+  min-width: 70px;
+  margin: 5px;
+  padding: 10px 14px;
+  background-color: #eeeeee;
+  color: #333;
+}
+
+.lesson-button.selected {
+  background-color: #d4e0ff;
+  font-weight: bold;
+}
+
+#lesson-warning {
+  font-size: 14px;
+  color: #666;
+  margin-top: 10px;
+}
