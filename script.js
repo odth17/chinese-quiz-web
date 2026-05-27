@@ -124,51 +124,36 @@ const quizData = [
   ];
 
  const sentenceData = [
-  {
-    chinese: "你今天怎么也回来晚了?",
-    pinyin: "Nǐ jīntiān zěnme yě huílai wǎn le?",
-    meaning: "당신 오늘 왜 이렇게 늦게 돌아왔어요?"
-  },
-  {
-    chinese: "我来跟你一起做饭吧。",
-    pinyin: "Wǒ lái gēn nǐ yìqǐ zuòfàn ba.",
-    meaning: "내가 같이 식사 준비할게요."
-  },
-  {
-    chinese: "回来得并不晚，到楼上张师傅家坐了会儿。",
-    pinyin: "Huílai de bìng bù wǎn, dào lóushàng Zhāng shīfu jiā zuò le huìr.",
-    meaning: "전혀 늦지 않게 왔는데, 윗층 장 사부님 댁에 잠깐 앉아 있다 왔어요."
-  },
-  {
-    chinese: "他们家又吵架了。",
-    pinyin: "Tāmen jiā yòu chǎojià le.",
-    meaning: "그 집 또 싸웠어요."
-  },
-  {
-    chinese: "他们为什么又吵了?",
-    pinyin: "Tāmen wèishénme yòu chǎo le?",
-    meaning: "왜 또 싸웠대요?"
-  },
-  {
-    chinese: "张师傅一回家就躺在沙发上，边看电视边抽烟。",
-    pinyin: "Zhāng shīfu yì huí jiā jiù tǎng zài shāfā shàng, biān kàn diànshì biān chōuyān.",
-    meaning: "장 씨는 집에 오자마자 소파에 누워 TV를 보면서 담배를 펴요."
-  },
-  {
-    chinese: "他爱人下了班，又洗菜又做饭。",
-    pinyin: "Tā àiren xià le bān, yòu xǐ cài yòu zuòfàn.",
-    meaning: "그의 부인은 퇴근하고 와서 채소도 씻고 밥도 해요."
-  },
-  {
-    chinese: "张师傅一点儿忙也不帮。",
-    pinyin: "Zhāng shīfu yìdiǎnr máng yě bù bāng.",
-    meaning: "장 씨는 조금도 도와주지 않아요."
-  },
-  {
-    chinese: "这就是张师傅不对了。",
-    pinyin: "Zhè jiù shì Zhāng shīfu bú duì le.",
-    meaning: "이건 장 씨가 잘못했네요."
-  },
+{
+  chinese: "你今天怎么也回来晚了?",
+  pinyin: "Nǐ jīntiān zěnme yě huílai wǎn le?",
+  meaning: "당신 오늘 왜 이렇게 늦게 돌아왔어요?",
+  words: ["你", "今天", "怎么", "也", "回来", "晚", "了"]
+},
+{
+  chinese: "我来跟你一起做饭吧。",
+  pinyin: "Wǒ lái gēn nǐ yìqǐ zuòfàn ba.",
+  meaning: "내가 같이 식사 준비할게요.",
+  words: ["我", "来", "跟", "你", "一起", "做饭", "吧"]
+},
+{
+  chinese: "他们家又吵架了。",
+  pinyin: "Tāmen jiā yòu chǎojià le.",
+  meaning: "그 집 또 싸웠어요.",
+  words: ["他们家", "又", "吵架", "了"]
+},
+{
+  chinese: "他们为什么又吵了?",
+  pinyin: "Tāmen wèishénme yòu chǎo le?",
+  meaning: "왜 또 싸웠대요?",
+  words: ["他们", "为什么", "又", "吵", "了"]
+},
+{
+  chinese: "这就是张师傅不对了。",
+  pinyin: "Zhè jiù shì Zhāng shīfu bú duì le.",
+  meaning: "이건 장 씨가 잘못했네요.",
+  words: ["这", "就是", "张师傅", "不对", "了"]
+},
   {
     chinese: "两个人都上了一天的班，都挺累的，回到家，怎么能光让一个人干活儿呢?",
     pinyin: "Liǎng ge rén dōu shàng le yì tiān de bān, dōu tǐng lèi de, huí dào jiā, zěnme néng guāng ràng yí ge rén gàn huór ne?",
@@ -569,7 +554,11 @@ function nextQuestion() {
   currentQuestionIndex++;
 
   if (currentQuestionIndex < shuffledQuizData.length) {
-    showQuestion();
+    if (currentMode === "order") {
+      showOrderQuestion();
+    } else {
+      showQuestion();
+    }
   } else {
     showResult();
   }
@@ -625,9 +614,11 @@ function goHome() {
   document.getElementById("next-button").onclick = nextQuestion;
   document.getElementById("next-button").style.display = "none";
 
-  currentQuestionIndex = 0;
-  score = 0;
-  shuffledQuizData = [];
+ currentQuestionIndex = 0;
+score = 0;
+shuffledQuizData = [];
+selectedWords = [];
+currentOrderQuestion = null;
 }
 function startSentenceQuiz(mode) {
   currentMode = mode;
@@ -647,4 +638,105 @@ function startSentenceQuiz(mode) {
   document.getElementById("home-button").style.display = "block";
 
   showQuestion();
+}
+let orderQuizData = [];
+let selectedWords = [];
+let currentOrderQuestion = null;
+
+function startOrderQuiz() {
+  currentMode = "order";
+  currentQuestionIndex = 0;
+  score = 0;
+  wrongAnswers = [];
+
+  orderQuizData = sentenceData.filter(item => item.words && item.words.length > 0);
+  shuffledQuizData = shuffleArray([...orderQuizData]).slice(0, Math.min(questionCount, orderQuizData.length));
+
+  document.getElementById("mode-box").style.display = "none";
+  document.getElementById("quiz-area").style.display = "block";
+
+  document.getElementById("score").textContent = "점수: 0";
+  document.getElementById("next-button").textContent = "다음 문제";
+  document.getElementById("next-button").onclick = nextQuestion;
+  document.getElementById("next-button").style.display = "none";
+  document.getElementById("home-button").style.display = "block";
+
+  showOrderQuestion();
+}
+
+function showOrderQuestion() {
+  currentOrderQuestion = shuffledQuizData[currentQuestionIndex];
+  selectedWords = [];
+
+  document.getElementById("progress").textContent =
+    `문제 ${currentQuestionIndex + 1} / ${shuffledQuizData.length}`;
+
+  document.getElementById("mode-title").textContent = "해석에 맞게 중국어 문장 순서 배열하기";
+  document.getElementById("question").textContent = currentOrderQuestion.meaning;
+  document.getElementById("result").textContent = "";
+  document.getElementById("next-button").style.display = "none";
+
+  const choicesDiv = document.getElementById("choices");
+  choicesDiv.innerHTML = "";
+
+  const selectedBox = document.createElement("div");
+  selectedBox.id = "selected-words";
+  selectedBox.textContent = "선택한 순서: ";
+  choicesDiv.appendChild(selectedBox);
+
+  const wordBox = document.createElement("div");
+  wordBox.id = "word-buttons";
+  choicesDiv.appendChild(wordBox);
+
+  const mixedWords = shuffleArray([...currentOrderQuestion.words]);
+
+  mixedWords.forEach(word => {
+    const button = document.createElement("button");
+    button.textContent = word;
+
+    button.onclick = function () {
+      selectedWords.push(word);
+      button.disabled = true;
+      updateSelectedWords();
+
+      if (selectedWords.length === currentOrderQuestion.words.length) {
+        checkOrderAnswer();
+      }
+    };
+
+    wordBox.appendChild(button);
+  });
+}
+
+function updateSelectedWords() {
+  const selectedBox = document.getElementById("selected-words");
+  selectedBox.textContent = "선택한 순서: " + selectedWords.join(" ");
+}
+
+function checkOrderAnswer() {
+  const correctSentence = currentOrderQuestion.words.join("");
+  const userSentence = selectedWords.join("");
+  const result = document.getElementById("result");
+
+  if (userSentence === correctSentence) {
+    result.textContent = `정답입니다!\n${currentOrderQuestion.chinese}`;
+    result.style.color = "blue";
+    score++;
+  } else {
+    result.textContent =
+      `오답입니다.\n정답: ${currentOrderQuestion.chinese}\n병음: ${currentOrderQuestion.pinyin}`;
+    result.style.color = "red";
+
+    wrongAnswers.push({
+      question: currentOrderQuestion.meaning,
+      selected: selectedWords.join(" "),
+      correct: currentOrderQuestion.chinese,
+      chinese: currentOrderQuestion.chinese,
+      pinyin: currentOrderQuestion.pinyin,
+      meaning: currentOrderQuestion.meaning
+    });
+  }
+
+  document.getElementById("score").textContent = `점수: ${score}`;
+  document.getElementById("next-button").style.display = "block";
 }
