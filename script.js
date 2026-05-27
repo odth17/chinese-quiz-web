@@ -2622,3 +2622,28 @@ function checkOrderAnswer() {
   document.getElementById("score").textContent = `점수: ${score}`;
   document.getElementById("next-button").style.display = "block";
 }
+function playCurrentAudio() {
+  let textToRead = "";
+
+  if (currentMode === "order") {
+    textToRead = currentOrderQuestion.chinese;
+  } else {
+    const currentQuestion = shuffledQuizData[currentQuestionIndex];
+
+    if (currentQuestion && currentQuestion.chinese) {
+      textToRead = currentQuestion.chinese;
+    }
+  }
+
+  if (!textToRead) {
+    alert("읽을 중국어 문장이 없습니다.");
+    return;
+  }
+
+  const utterance = new SpeechSynthesisUtterance(textToRead);
+  utterance.lang = "zh-CN";
+  utterance.rate = 0.85;
+
+  window.speechSynthesis.cancel();
+  window.speechSynthesis.speak(utterance);
+}
