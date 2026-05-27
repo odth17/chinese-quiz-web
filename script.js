@@ -2748,17 +2748,38 @@ function playTextAudio(text) {
   const utterance = new SpeechSynthesisUtterance(text);
   utterance.lang = "zh-CN";
   utterance.rate = 0.75;
-  utterance.pitch = 1.05;
+  utterance.pitch = 1.1;
   utterance.volume = 1;
 
   const voices = window.speechSynthesis.getVoices();
 
-  const chineseVoice = voices.find(voice =>
+  const preferredFemaleVoice = voices.find(voice => {
+    const name = voice.name.toLowerCase();
+    const lang = voice.lang.toLowerCase();
+
+    return (
+      lang.startsWith("zh") &&
+      (
+        name.includes("female") ||
+        name.includes("xiaoxiao") ||
+        name.includes("ting") ||
+        name.includes("ting-ting") ||
+        name.includes("meijia") ||
+        name.includes("mei-jia") ||
+        name.includes("sinji") ||
+        name.includes("google")
+      )
+    );
+  });
+
+  const anyChineseVoice = voices.find(voice =>
     voice.lang && voice.lang.toLowerCase().startsWith("zh")
   );
 
-  if (chineseVoice) {
-    utterance.voice = chineseVoice;
+  if (preferredFemaleVoice) {
+    utterance.voice = preferredFemaleVoice;
+  } else if (anyChineseVoice) {
+    utterance.voice = anyChineseVoice;
   }
 
   setTimeout(() => {
