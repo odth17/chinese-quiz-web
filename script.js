@@ -2201,18 +2201,21 @@ function shuffleArray(array) {
 
 function startQuiz(mode) {
   currentMode = mode;
-currentQuestionIndex = 0;
-score = 0;
-wrongAnswers = [];
+  currentQuestionIndex = 0;
+  score = 0;
+  wrongAnswers = [];
 
   const filteredData = filterByLesson(quizData);
 
-if (selectedLessons.length === 0 || filteredData.length === 0) {
-  alert("출제 범위를 하나 이상 선택해줘!");
-  return;
-}
+  if (selectedLessons.length === 0 || filteredData.length === 0) {
+    alert("출제 범위를 하나 이상 선택해줘!");
+    return;
+  }
 
-shuffledQuizData = shuffleArray([...filteredData]).slice(0, Math.min(questionCount, filteredData.length));
+  shuffledQuizData = shuffleArray([...filteredData]).slice(
+    0,
+    Math.min(questionCount, filteredData.length)
+  );
 
   document.getElementById("mode-box").style.display = "none";
   document.getElementById("quiz-area").style.display = "block";
@@ -2435,16 +2438,16 @@ function startSentenceQuiz(mode) {
   score = 0;
   wrongAnswers = [];
 
-  const filteredData = filterByLesson(sentenceData);
+  const filteredSentenceData = filterByLesson(sentenceData);
 
-  if (selectedLessons.length === 0 || filteredData.length === 0) {
+  if (selectedLessons.length === 0 || filteredSentenceData.length === 0) {
     alert("출제 범위를 하나 이상 선택해줘!");
     return;
   }
 
-  shuffledQuizData = shuffleArray([...filteredData]).slice(
+  shuffledQuizData = shuffleArray([...filteredSentenceData]).slice(
     0,
-    Math.min(questionCount, filteredData.length)
+    Math.min(questionCount, filteredSentenceData.length)
   );
 
   document.getElementById("mode-box").style.display = "none";
@@ -2468,14 +2471,14 @@ function startOrderQuiz() {
   score = 0;
   wrongAnswers = [];
 
-  const filteredSentenceData = filterByLesson(sentenceData);
+  const filteredOrderData = filterByLesson(sentenceData);
 
-  if (selectedLessons.length === 0 || filteredSentenceData.length === 0) {
+  if (selectedLessons.length === 0 || filteredOrderData.length === 0) {
     alert("출제 범위를 하나 이상 선택해줘!");
     return;
   }
 
-  orderQuizData = filteredSentenceData.filter(item => item.words && item.words.length > 0);
+  orderQuizData = filteredOrderData.filter(item => item.words && item.words.length > 0);
 
   if (orderQuizData.length === 0) {
     alert("선택한 범위에 순서 배열 문제가 없어!");
