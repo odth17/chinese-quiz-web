@@ -162,3 +162,67 @@ button:disabled {
 #audio-button:hover {
   background-color: #ffe69c;
 }
+#sentence-view-box {
+  margin-top: 24px;
+  padding: 15px;
+  background-color: #fffaf0;
+  border-radius: 15px;
+}
+
+#sentence-list-area {
+  background-color: white;
+  width: 700px;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.sentence-card {
+  text-align: left;
+  padding: 18px;
+  margin-bottom: 18px;
+  border-radius: 15px;
+  background-color: #f8f9ff;
+  border: 1px solid #e1e5f2;
+}
+
+.sentence-number {
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.sentence-chinese {
+  font-size: 24px;
+  font-weight: bold;
+  color: #222;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.sentence-pinyin {
+  color: #555;
+  font-style: italic;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.sentence-meaning {
+  color: #333;
+  line-height: 1.5;
+}
+
+.small-audio-button {
+  width: auto;
+  min-width: 80px;
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  background-color: #fff3cd;
+  color: #333;
+}
+
+.small-audio-button:hover {
+  background-color: #ffe69c;
+}
