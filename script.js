@@ -681,37 +681,38 @@ function showOrderQuestion() {
 
   const selectedBox = document.createElement("div");
   selectedBox.id = "selected-words";
-  selectedBox.textContent = "선택한 순서: ";
   choicesDiv.appendChild(selectedBox);
 
   const wordBox = document.createElement("div");
   wordBox.id = "word-buttons";
   choicesDiv.appendChild(wordBox);
 
+  updateSelectedWords();
+
   const mixedWords = shuffleArray([...currentOrderQuestion.words]);
 
- mixedWords.forEach((word, index) => {
-  const button = document.createElement("button");
-  button.textContent = word;
-  button.dataset.word = word;
-  button.dataset.index = index;
+  mixedWords.forEach((word, index) => {
+    const button = document.createElement("button");
+    button.textContent = word;
+    button.dataset.index = index;
+    button.dataset.word = word;
 
-  button.onclick = function () {
-    selectedWords.push({
-      word: word,
-      index: index
-    });
+    button.onclick = function () {
+      selectedWords.push({
+        word: word,
+        index: index
+      });
 
-    button.disabled = true;
-    updateSelectedWords();
+      button.disabled = true;
+      updateSelectedWords();
 
-    if (selectedWords.length === currentOrderQuestion.words.length) {
-      checkOrderAnswer();
-    }
-  };
+      if (selectedWords.length === currentOrderQuestion.words.length) {
+        checkOrderAnswer();
+      }
+    };
 
-  wordBox.appendChild(button);
-});
+    wordBox.appendChild(button);
+  });
 }
 
 function updateSelectedWords() {
@@ -721,6 +722,14 @@ function updateSelectedWords() {
   const title = document.createElement("p");
   title.textContent = "선택한 순서:";
   selectedBox.appendChild(title);
+
+  if (selectedWords.length === 0) {
+    const emptyText = document.createElement("p");
+    emptyText.textContent = "아직 선택한 단어가 없습니다.";
+    emptyText.className = "empty-selected-text";
+    selectedBox.appendChild(emptyText);
+    return;
+  }
 
   selectedWords.forEach((item, selectedIndex) => {
     const selectedButton = document.createElement("button");
@@ -737,6 +746,9 @@ function updateSelectedWords() {
       if (originalButton) {
         originalButton.disabled = false;
       }
+
+      document.getElementById("result").textContent = "";
+      document.getElementById("next-button").style.display = "none";
 
       updateSelectedWords();
     };
