@@ -30,6 +30,15 @@
 <button onclick="startSentenceQuiz('sentenceMeaning')">중국어 문장 보고 해석 맞추기</button>
 <button onclick="startSentenceQuiz('sentenceChinese')">해석 보고 중국어 문장 맞추기</button>
 <button onclick="startOrderQuiz()">문장 순서 배열하기</button>
+      <div id="sentence-view-box">
+  <p class="question-title">과별 문장 보기</p>
+
+  <button onclick="showLessonSentences(8)">8과 문장 보기</button>
+  <button onclick="showLessonSentences(9)">9과 문장 보기</button>
+  <button onclick="showLessonSentences(10)">10과 문장 보기</button>
+  <button onclick="showLessonSentences(11)">11과 문장 보기</button>
+  <button onclick="showLessonSentences(12)">12과 문장 보기</button>
+</div>
     </div>
 
     <div id="quiz-area" style="display: none;">
@@ -49,6 +58,13 @@
 
 <p id="score">점수: 0</p>
     </div>
+    <div id="sentence-list-area" style="display: none;">
+  <h2 id="sentence-list-title">문장 보기</h2>
+
+  <div id="sentence-list"></div>
+
+  <button onclick="goHome()">메인 메뉴로</button>
+</div>
   </div>
 
   <script src="script.js"></script>
