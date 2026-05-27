@@ -2417,6 +2417,7 @@ function showResult() {
 function goHome() {
   document.getElementById("quiz-area").style.display = "none";
   document.getElementById("mode-box").style.display = "block";
+  document.getElementById("sentence-list-area").style.display = "none";
 
   document.getElementById("result").textContent = "";
   document.getElementById("choices").innerHTML = "";
@@ -2687,3 +2688,81 @@ function playCurrentAudio() {
 window.speechSynthesis.onvoiceschanged = function () {
   window.speechSynthesis.getVoices();
 };
+function showLessonSentences(lessonNumber) {
+  const lessonSentences = sentenceData.filter(item => item.lesson === lessonNumber);
+
+  document.getElementById("mode-box").style.display = "none";
+  document.getElementById("quiz-area").style.display = "none";
+  document.getElementById("sentence-list-area").style.display = "block";
+
+  document.getElementById("sentence-list-title").textContent =
+    lessonNumber + "과 문장 보기";
+
+  const sentenceList = document.getElementById("sentence-list");
+  sentenceList.innerHTML = "";
+
+  lessonSentences.forEach((item, index) => {
+    const card = document.createElement("div");
+    card.className = "sentence-card";
+
+    const number = document.createElement("p");
+    number.className = "sentence-number";
+    number.textContent = index + 1 + ".";
+
+    const chinese = document.createElement("p");
+    chinese.className = "sentence-chinese";
+    chinese.textContent = item.chinese;
+
+    const audioButton = document.createElement("button");
+    audioButton.className = "small-audio-button";
+    audioButton.textContent = "🔊 듣기";
+    audioButton.onclick = function () {
+      playTextAudio(item.chinese);
+    };
+
+    const pinyin = document.createElement("p");
+    pinyin.className = "sentence-pinyin";
+    pinyin.textContent = item.pinyin;
+
+    const meaning = document.createElement("p");
+    meaning.className = "sentence-meaning";
+    meaning.textContent = item.meaning;
+
+    card.appendChild(number);
+    card.appendChild(chinese);
+    card.appendChild(audioButton);
+    card.appendChild(pinyin);
+    card.appendChild(meaning);
+
+    sentenceList.appendChild(card);
+  });
+}
+
+function playTextAudio(text) {
+  if (!text) {
+    alert("읽을 중국어 문장이 없습니다.");
+    return;
+  }
+
+  window.speechSynthesis.cancel();
+
+  const utterance = new SpeechSynthesisUtterance(text);
+  utterance.lang = "zh-CN";
+  utterance.rate = 0.75;
+  utterance.pitch = 1.05;
+  utterance.volume = 1;
+
+  const voices = window.speechSynthesis.getVoices();
+
+  const chineseVoice = voices.find(voice =>
+    voice.lang && voice.lang.toLowerCase().startsWith("zh")
+  );
+
+  if (chineseVoice) {
+    utterance.voice = chineseVoice;
+  }
+
+  setTimeout(() => {
+    window.speechSynthesis.speak(utterance);
+  }, 100);
+}
