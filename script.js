@@ -2182,7 +2182,12 @@ function toggleLesson(lesson, button) {
   if (selectedLessons.length === 0) {
     warning.textContent = "최소 한 과 이상 선택해야 해!";
   } else {
-    warning.textContent = "선택된 범위: " + selectedLessons.sort((a, b) => a - b).map(n => n + "과").join(", ");
+    warning.textContent =
+      "선택된 범위: " +
+      selectedLessons
+        .sort((a, b) => a - b)
+        .map(n => n + "과")
+        .join(", ");
   }
 }
 
@@ -2437,6 +2442,13 @@ if (selectedLessons.length === 0 || filteredData.length === 0) {
   return;
 }
 
+const filteredData = filterByLesson(sentenceData);
+
+if (selectedLessons.length === 0 || filteredData.length === 0) {
+  alert("출제 범위를 하나 이상 선택해줘!");
+  return;
+}
+
 shuffledQuizData = shuffleArray([...filteredData]).slice(0, Math.min(questionCount, filteredData.length));
   document.getElementById("mode-box").style.display = "none";
   document.getElementById("quiz-area").style.display = "block";
@@ -2466,7 +2478,21 @@ if (selectedLessons.length === 0 || filteredSentenceData.length === 0) {
   return;
 }
 
+const filteredSentenceData = filterByLesson(sentenceData);
+
+if (selectedLessons.length === 0 || filteredSentenceData.length === 0) {
+  alert("출제 범위를 하나 이상 선택해줘!");
+  return;
+}
+
 orderQuizData = filteredSentenceData.filter(item => item.words && item.words.length > 0);
+
+if (orderQuizData.length === 0) {
+  alert("선택한 범위에 순서 배열 문제가 없어!");
+  return;
+}
+
+shuffledQuizData = shuffleArray([...orderQuizData]).slice(0, Math.min(orderQuestionCount, orderQuizData.length));
 
 if (orderQuizData.length === 0) {
   alert("선택한 범위에 순서 배열 문제가 없어!");
