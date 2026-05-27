@@ -2786,3 +2786,6 @@ function playTextAudio(text) {
     window.speechSynthesis.speak(utterance);
   }, 100);
 }
+window.speechSynthesis.onvoiceschanged = function () {
+  window.speechSynthesis.getVoices();
+};
