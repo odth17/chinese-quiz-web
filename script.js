@@ -2625,9 +2625,9 @@ function checkOrderAnswer() {
 function playCurrentAudio() {
   let textToRead = "";
 
-  if (currentMode === "order") {
+  if (currentMode === "order" && currentOrderQuestion) {
     textToRead = currentOrderQuestion.chinese;
-  } else {
+  } else if (shuffledQuizData.length > 0) {
     const currentQuestion = shuffledQuizData[currentQuestionIndex];
 
     if (currentQuestion && currentQuestion.chinese) {
@@ -2640,10 +2640,31 @@ function playCurrentAudio() {
     return;
   }
 
+  window.speechSynthesis.cancel();
+
   const utterance = new SpeechSynthesisUtterance(textToRead);
   utterance.lang = "zh-CN";
-  utterance.rate = 0.85;
+  utterance.rate = 0.8;
+  utterance.pitch = 1;
 
-  window.speechSynthesis.cancel();
+  const voices = window.speechSynthesis.getVoices();
+
+  const chineseVoice = voices.find(voice =>
+    voice.lang === "zh-CN" ||
+    voice.lang === "zh_CN" ||
+    voice.lang.startsWith("zh")
+  );
+
+  if (chineseVoice) {
+    utterance.voice = chineseVoice;
+  }
+
+  utterance.onerror = function (event) {
+    alert("음성 재생 오류가 났어: " + event.error);
+  };
+
   window.speechSynthesis.speak(utterance);
 }
+window.speechSynthesis.onvoiceschanged = function () {
+  window.speechSynthesis.getVoices();
+};
