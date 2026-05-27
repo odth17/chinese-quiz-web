@@ -2737,7 +2737,6 @@ function showLessonSentences(lessonNumber) {
     sentenceList.appendChild(card);
   });
 }
-
 function playTextAudio(text) {
   if (!text) {
     alert("읽을 중국어 문장이 없습니다.");
