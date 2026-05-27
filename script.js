@@ -837,6 +837,996 @@ const sentenceData = [
     pinyin: "Chéngjì bù jígé bù fā bìyèzhèng.",
     meaning: "성적이 모자라면 졸업증서를 발급하지 않는다.",
     words: ["成绩", "不", "及格", "不", "发", "毕业证"]
+  },
+    {
+    chinese: "请你参加我们的婚礼。",
+    pinyin: "Qǐng nǐ cānjiā wǒmen de hūnlǐ.",
+    meaning: "우리 결혼식에 참석해 줘.",
+    words: ["请", "你", "参加", "我们的", "婚礼"]
+  },
+  {
+    chinese: "谁的喜糖？",
+    pinyin: "Shéi de xǐtáng?",
+    meaning: "누구의 결혼식 사탕이야?",
+    words: ["谁的", "喜糖"]
+  },
+  {
+    chinese: "李秘书的。",
+    pinyin: "Lǐ mìshū de.",
+    meaning: "이 비서 거야.",
+    words: ["李秘书的"]
+  },
+  {
+    chinese: "他结婚了？",
+    pinyin: "Tā jiéhūn le?",
+    meaning: "그가 결혼했어?",
+    words: ["他", "结婚", "了"]
+  },
+  {
+    chinese: "什么时候办的喜事？",
+    pinyin: "Shénme shíhou bàn de xǐshì?",
+    meaning: "결혼식 언제 했어?",
+    words: ["什么时候", "办的", "喜事"]
+  },
+  {
+    chinese: "请亲戚朋友喝了顿喜酒，然后就带着新娘旅行去了。",
+    pinyin: "Qǐng qīnqi péngyou hē le dùn xǐjiǔ, ránhòu jiù dàizhe xīnniáng lǚxíng qù le.",
+    meaning: "친척과 친구들을 초대해서 축하주 한 잔 하고, 바로 신부 데리고 여행을 떠났어.",
+    words: ["请", "亲戚朋友", "喝了", "顿", "喜酒", "然后", "就", "带着", "新娘", "旅行", "去", "了"]
+  },
+  {
+    chinese: "怪不得这几天他没来上班呢，原来是当新郎去了。",
+    pinyin: "Guàibude zhè jǐ tiān tā méi lái shàngbān ne, yuánlái shì dāng xīnláng qù le.",
+    meaning: "어쩐지 요 며칠 그가 출근하지 않더라니, 알고 보니 새신랑이 되었구나.",
+    words: ["怪不得", "这几天", "他", "没", "来", "上班", "呢", "原来", "是", "当", "新郎", "去", "了"]
+  },
+  {
+    chinese: "他们去几天？",
+    pinyin: "Tāmen qù jǐ tiān?",
+    meaning: "그들은 며칠 동안 가는데?",
+    words: ["他们", "去", "几天"]
+  },
+  {
+    chinese: "最少也得一个星期吧。",
+    pinyin: "Zuìshǎo yě děi yí ge xīngqī ba.",
+    meaning: "최소한 일주일은 가겠지.",
+    words: ["最少", "也", "得", "一个", "星期", "吧"]
+  },
+  {
+    chinese: "将来你也来个旅行结婚，好不好？",
+    pinyin: "Jiānglái nǐ yě lái ge lǚxíng jiéhūn, hǎo bù hǎo?",
+    meaning: "나중에 너도 여행 결혼을 하는 건 어때?",
+    words: ["将来", "你", "也", "来个", "旅行结婚", "好不好"]
+  },
+  {
+    chinese: "我来个更浪漫的。",
+    pinyin: "Wǒ lái ge gèng làngmàn de.",
+    meaning: "난 좀 더 낭만적으로 해야지.",
+    words: ["我", "来个", "更", "浪漫的"]
+  },
+  {
+    chinese: "什么更浪漫的？",
+    pinyin: "Shénme gèng làngmàn de?",
+    meaning: "어떤 더 낭만적인 것?",
+    words: ["什么", "更", "浪漫的"]
+  },
+  {
+    chinese: "这是秘密，现在不能告诉你。",
+    pinyin: "Zhè shì mìmì, xiànzài bù néng gàosu nǐ.",
+    meaning: "그건 비밀이야, 지금은 말해줄 수 없어.",
+    words: ["这", "是", "秘密", "现在", "不能", "告诉", "你"]
+  },
+  {
+    chinese: "是你们哪，快请进！",
+    pinyin: "Shì nǐmen na, kuài qǐng jìn!",
+    meaning: "너희들이구나, 어서 들어와!",
+    words: ["是", "你们", "哪", "快", "请进"]
+  },
+  {
+    chinese: "什么时候吃你们的喜糖呀？",
+    pinyin: "Shénme shíhou chī nǐmen de xǐtáng ya?",
+    meaning: "너희들 결혼 사탕은 언제 먹게 해 줄 거니?",
+    words: ["什么时候", "吃", "你们的", "喜糖", "呀"]
+  },
+  {
+    chinese: "六月十六日，星期六。",
+    pinyin: "Liù yuè shíliù rì, xīngqīliù.",
+    meaning: "6월 16일, 토요일이야.",
+    words: ["六月", "十六日", "星期六"]
+  },
+  {
+    chinese: "这可是大喜事。",
+    pinyin: "Zhè kě shì dà xǐshì.",
+    meaning: "이건 정말 기쁜 일이다.",
+    words: ["这", "可是", "大喜事"]
+  },
+  {
+    chinese: "日子选得真好！",
+    pinyin: "Rìzi xuǎn de zhēn hǎo!",
+    meaning: "날도 아주 잘 선택했네!",
+    words: ["日子", "选得", "真", "好"]
+  },
+  {
+    chinese: "六六大顺哪！",
+    pinyin: "Liù liù dà shùn na!",
+    meaning: "모든 일이 순조로울 거야!",
+    words: ["六六大顺", "哪"]
+  },
+  {
+    chinese: "我一定去。",
+    pinyin: "Wǒ yídìng qù.",
+    meaning: "꼭 갈게.",
+    words: ["我", "一定", "去"]
+  },
+  {
+    chinese: "喜酒得多多准备呀。",
+    pinyin: "Xǐjiǔ děi duōduō zhǔnbèi ya.",
+    meaning: "결혼 축하주나 많이 준비해 둬!",
+    words: ["喜酒", "得", "多多", "准备", "呀"]
+  },
+  {
+    chinese: "请大家举杯，为新郎新娘的幸福，干杯！",
+    pinyin: "Qǐng dàjiā jǔ bēi, wèi xīnláng xīnniáng de xìngfú, gānbēi!",
+    meaning: "여러분 잔을 들어 주십시오. 신랑과 신부의 행복을 위하여 건배!",
+    words: ["请", "大家", "举杯", "为", "新郎新娘的", "幸福", "干杯"]
+  },
+  {
+    chinese: "现在喜酒也喝了，父母也拜了，该干什么了？",
+    pinyin: "Xiànzài xǐjiǔ yě hē le, fùmǔ yě bài le, gāi gàn shénme le?",
+    meaning: "축하주도 마셨고, 부모님께 큰절도 올렸으니 이제 뭘 해야 하죠?",
+    words: ["现在", "喜酒", "也", "喝", "了", "父母", "也", "拜", "了", "该", "干", "什么", "了"]
+  },
+  {
+    chinese: "新郎新娘介绍恋爱经过。",
+    pinyin: "Xīnláng xīnniáng jièshào liàn’ài jīngguò.",
+    meaning: "신랑, 신부의 연애담 좀 들어 봅시다.",
+    words: ["新郎新娘", "介绍", "恋爱经过"]
+  },
+  {
+    chinese: "别拿我们开心了。",
+    pinyin: "Bié ná wǒmen kāixīn le.",
+    meaning: "우리 가지고 놀리지 마세요.",
+    words: ["别", "拿", "我们", "开心", "了"]
+  },
+  {
+    chinese: "今天是什么日子？",
+    pinyin: "Jīntiān shì shénme rìzi?",
+    meaning: "오늘이 무슨 날이지요?",
+    words: ["今天", "是", "什么", "日子"]
+  },
+  {
+    chinese: "他们不说，行吗？",
+    pinyin: "Tāmen bù shuō, xíng ma?",
+    meaning: "신랑, 신부가 말 안 해도 될까요?",
+    words: ["他们", "不", "说", "行", "吗"]
+  },
+  {
+    chinese: "那我先说吧。",
+    pinyin: "Nà wǒ xiān shuō ba.",
+    meaning: "그럼 제가 먼저 말할게요.",
+    words: ["那", "我", "先", "说", "吧"]
+  },
+  {
+    chinese: "如果他说得不完全，新娘再给补充补充。",
+    pinyin: "Rúguǒ tā shuō de bù wánquán, xīnniáng zài gěi bǔchōng bǔchōng.",
+    meaning: "만약 신랑이 전부 말하지 않으면 신부가 더 보충해 주십시오.",
+    words: ["如果", "他", "说得", "不", "完全", "新娘", "再", "给", "补充补充"]
+  },
+  {
+    chinese: "我们俩是同班同学，原来互相不太熟悉。",
+    pinyin: "Wǒmen liǎ shì tóngbān tóngxué, yuánlái hùxiāng bú tài shúxī.",
+    meaning: "우리는 같은 반 친구였는데, 처음에는 서로 잘 몰랐었습니다.",
+    words: ["我们俩", "是", "同班同学", "原来", "互相", "不太", "熟悉"]
+  },
+  {
+    chinese: "一天，下课的时候，突然下起雨来。",
+    pinyin: "Yì tiān, xiàkè de shíhou, tūrán xià qǐ yǔ lái.",
+    meaning: "어느 날 수업이 끝난 후 갑자기 비가 내리기 시작했다.",
+    words: ["一天", "下课的时候", "突然", "下起", "雨", "来"]
+  },
+  {
+    chinese: "别说话，好好儿听。",
+    pinyin: "Bié shuōhuà, hǎohāor tīng.",
+    meaning: "말하지 말고 잘 들어요.",
+    words: ["别", "说话", "好好儿", "听"]
+  },
+  {
+    chinese: "新郎和新娘说完了故事。",
+    pinyin: "Xīnláng hé xīnniáng shuō wán le gùshi.",
+    meaning: "신랑과 신부가 이야기를 마쳤다.",
+    words: ["新郎", "和", "新娘", "说完了", "故事"]
+  },
+  {
+    chinese: "大家说，他们的故事怎么样？",
+    pinyin: "Dàjiā shuō, tāmen de gùshi zěnmeyàng?",
+    meaning: "여러분, 신랑 신부 이야기 어땠어요?",
+    words: ["大家", "说", "他们的", "故事", "怎么样"]
+  },
+  {
+    chinese: "好极了！",
+    pinyin: "Hǎo jí le!",
+    meaning: "정말 좋아요!",
+    words: ["好极了"]
+  },
+  {
+    chinese: "太精彩了！",
+    pinyin: "Tài jīngcǎi le!",
+    meaning: "정말 멋져요!",
+    words: ["太", "精彩", "了"]
+  },
+  {
+    chinese: "来，我们再一次举杯，祝新郎新娘和和美美！",
+    pinyin: "Lái, wǒmen zài yí cì jǔ bēi, zhù xīnláng xīnniáng héhé měiměi!",
+    meaning: "자, 우리 다시 한번 잔을 들어 신랑, 신부가 화목하게 잘 살도록 축복합시다!",
+    words: ["来", "我们", "再", "一次", "举杯", "祝", "新郎新娘", "和和美美"]
+  },
+  {
+    chinese: "白头到老！",
+    pinyin: "Bái tóu dào lǎo!",
+    meaning: "백년해로하세요!",
+    words: ["白头到老"]
+  },
+  {
+    chinese: "办喜事，当然要选好日子。",
+    pinyin: "Bàn xǐshì, dāngrán yào xuǎn hǎo rìzi.",
+    meaning: "결혼식을 치르는데 당연히 좋은 날짜를 골라야 한다.",
+    words: ["办", "喜事", "当然", "要", "选", "好", "日子"]
+  },
+  {
+    chinese: "请大家吃喜糖，喝喜酒啦！",
+    pinyin: "Qǐng dàjiā chī xǐtáng, hē xǐjiǔ la!",
+    meaning: "모두 결혼 사탕을 드시고 결혼 축하주를 마셔요!",
+    words: ["请", "大家", "吃", "喜糖", "喝", "喜酒", "啦"]
+  },
+  {
+    chinese: "怪不得今天他这么高兴呢，原来妈妈来看他了。",
+    pinyin: "Guàibude jīntiān tā zhème gāoxìng ne, yuánlái māma lái kàn tā le.",
+    meaning: "어쩐지 오늘 그가 그렇게 기분이 좋더라니, 알고 보니 어머니가 그를 보러 오셨구나.",
+    words: ["怪不得", "今天", "他", "这么", "高兴", "呢", "原来", "妈妈", "来", "看", "他", "了"]
+  },
+  {
+    chinese: "她是在中国长大的，怪不得她的汉语说得这么棒呢！",
+    pinyin: "Tā shì zài Zhōngguó zhǎng dà de, guàibude tā de Hànyǔ shuō de zhème bàng ne!",
+    meaning: "그녀는 중국에서 자랐어. 어쩐지 그녀의 중국어 실력이 대단하더라니!",
+    words: ["她", "是", "在", "中国", "长大", "的", "怪不得", "她的", "汉语", "说得", "这么", "棒", "呢"]
+  },
+  {
+    chinese: "再来一首吧！",
+    pinyin: "Zài lái yì shǒu ba!",
+    meaning: "한 곡 더 불러!",
+    words: ["再", "来", "一首", "吧"]
+  },
+  {
+    chinese: "周末来个大扫除吧。",
+    pinyin: "Zhōumò lái ge dà sǎochú ba.",
+    meaning: "주말에 대청소하자.",
+    words: ["周末", "来个", "大扫除", "吧"]
+  },
+  {
+    chinese: "我吃蛋糕，你来不来？",
+    pinyin: "Wǒ chī dàngāo, nǐ lái bù lái?",
+    meaning: "나 케이크 먹을 건데, 너도 먹을래?",
+    words: ["我", "吃", "蛋糕", "你", "来不来"]
+  },
+  {
+    chinese: "他们常常拿小孩子开心。",
+    pinyin: "Tāmen chángcháng ná xiǎo háizi kāixīn.",
+    meaning: "그들은 항상 어린아이를 놀리며 장난친다.",
+    words: ["他们", "常常", "拿", "小孩子", "开心"]
+  },
+  {
+    chinese: "你们别拿我说错的话开心了。",
+    pinyin: "Nǐmen bié ná wǒ shuō cuò de huà kāixīn le.",
+    meaning: "너희들 내가 잘못한 말을 가지고 놀리지 마.",
+    words: ["你们", "别", "拿", "我", "说错的", "话", "开心", "了"]
+  },
+  {
+    chinese: "通过了面试，然后就可以上班了。",
+    pinyin: "Tōngguò le miànshì, ránhòu jiù kěyǐ shàngbān le.",
+    meaning: "면접에 통과하면 바로 출근하면 된다.",
+    words: ["通过了", "面试", "然后", "就", "可以", "上班", "了"]
+  },
+  {
+    chinese: "我工作了一年，然后就来中国了。",
+    pinyin: "Wǒ gōngzuò le yì nián, ránhòu jiù lái Zhōngguó le.",
+    meaning: "나는 1년 동안 일하고 바로 중국에 왔다.",
+    words: ["我", "工作了", "一年", "然后", "就", "来", "中国", "了"]
+  },
+  {
+    chinese: "我看了一会儿电视，然后就睡觉了。",
+    pinyin: "Wǒ kàn le yíhuìr diànshì, ránhòu jiù shuìjiào le.",
+    meaning: "나는 TV를 잠시 보고 바로 잠들었다.",
+    words: ["我", "看了", "一会儿", "电视", "然后", "就", "睡觉", "了"]
+  },
+  {
+    chinese: "怪不得没人相信呢，原来他总开玩笑。",
+    pinyin: "Guàibude méi rén xiāngxìn ne, yuánlái tā zǒng kāi wánxiào.",
+    meaning: "어쩐지 아무도 안 믿더라니, 알고 보니 그는 늘 농담을 하는구나.",
+    words: ["怪不得", "没人", "相信", "呢", "原来", "他", "总", "开玩笑"]
+  },
+  {
+    chinese: "怪不得他这么重视呢，原来这是毕业考试。",
+    pinyin: "Guàibude tā zhème zhòngshì ne, yuánlái zhè shì bìyè kǎoshì.",
+    meaning: "어쩐지 그가 그렇게 중시하더라니, 알고 보니 이건 졸업시험이구나.",
+    words: ["怪不得", "他", "这么", "重视", "呢", "原来", "这", "是", "毕业考试"]
+  },
+  {
+    chinese: "怪不得他们那么熟悉呢，原来是同班同学。",
+    pinyin: "Guàibude tāmen nàme shúxī ne, yuánlái shì tóngbān tóngxué.",
+    meaning: "어쩐지 그들이 그렇게 잘 알더라니, 알고 보니 같은 반 친구였구나.",
+    words: ["怪不得", "他们", "那么", "熟悉", "呢", "原来", "是", "同班同学"]
+  },
+  {
+    chinese: "坐火车去的话，最少要一天一夜吧。",
+    pinyin: "Zuò huǒchē qù de huà, zuìshǎo yào yì tiān yí yè ba.",
+    meaning: "기차를 타고 간다면 최소한 하루 낮과 하룻밤은 걸릴 거야.",
+    words: ["坐", "火车", "去", "的话", "最少", "要", "一天一夜", "吧"]
+  },
+  {
+    chinese: "韩国同学最少占百分之五十吧。",
+    pinyin: "Hánguó tóngxué zuìshǎo zhàn bǎi fēn zhī wǔshí ba.",
+    meaning: "한국인 학생이 최소한 50퍼센트는 차지할 거다.",
+    words: ["韩国同学", "最少", "占", "百分之五十", "吧"]
+  },
+  {
+    chinese: "写八百字，最少要用半个小时吧。",
+    pinyin: "Xiě bābǎi zì, zuìshǎo yào yòng bàn ge xiǎoshí ba.",
+    meaning: "800자를 쓰려면 최소한 30분은 걸릴 거다.",
+    words: ["写", "八百字", "最少", "要", "用", "半个小时", "吧"]
+  },
+  {
+    chinese: "祝大家学习进步！",
+    pinyin: "Zhù dàjiā xuéxí jìnbù!",
+    meaning: "모두의 학습이 진보하길 바랍니다!",
+    words: ["祝", "大家", "学习", "进步"]
+  },
+  {
+    chinese: "祝老师们节日快乐！",
+    pinyin: "Zhù lǎoshīmen jiérì kuàilè!",
+    meaning: "선생님들 기념일 축하해요!",
+    words: ["祝", "老师们", "节日", "快乐"]
+  },
+  {
+    chinese: "祝你工作顺利！",
+    pinyin: "Zhù nǐ gōngzuò shùnlì!",
+    meaning: "너 일이 순조롭게 잘 되기를 바라!",
+    words: ["祝", "你", "工作", "顺利"]
+  },
+    {
+    chinese: "客人有客人的爱好嘛。",
+    pinyin: "Kèrén yǒu kèrén de àihào ma.",
+    meaning: "사람마다 각자의 취미가 있잖아.",
+    words: ["客人", "有", "客人的", "爱好", "嘛"]
+  },
+  {
+    chinese: "中国人晚上一般干什么？",
+    pinyin: "Zhōngguó rén wǎnshang yìbān gàn shénme?",
+    meaning: "중국인들은 저녁에 주로 뭘 하니?",
+    words: ["中国人", "晚上", "一般", "干", "什么"]
+  },
+  {
+    chinese: "人跟人不一样。",
+    pinyin: "Rén gēn rén bù yíyàng.",
+    meaning: "사람마다 다 달라.",
+    words: ["人", "跟", "人", "不", "一样"]
+  },
+  {
+    chinese: "拿我来说吧，主要是看电视。",
+    pinyin: "Ná wǒ lái shuō ba, zhǔyào shì kàn diànshì.",
+    meaning: "나로 말하자면 주로 TV를 시청해.",
+    words: ["拿", "我", "来说", "吧", "主要", "是", "看", "电视"]
+  },
+  {
+    chinese: "晚上常常有好看的电视剧，一天两集。",
+    pinyin: "Wǎnshang chángcháng yǒu hǎokàn de diànshìjù, yì tiān liǎng jí.",
+    meaning: "저녁에 종종 재미있는 드라마를 하루에 두 편씩 해 줘.",
+    words: ["晚上", "常常", "有", "好看的", "电视剧", "一天", "两集"]
+  },
+  {
+    chinese: "一个电视剧一般有二三十集，有的四五十集。",
+    pinyin: "Yí ge diànshìjù yìbān yǒu èr sān shí jí, yǒu de sì wǔ shí jí.",
+    meaning: "드라마 한 편은 보통 20~30회 정도인데, 어떤 것은 40~50회까지 있어.",
+    words: ["一个", "电视剧", "一般", "有", "二三十集", "有的", "四五十集"]
+  },
+  {
+    chinese: "那么长！",
+    pinyin: "Nàme cháng!",
+    meaning: "그렇게 길어!",
+    words: ["那么", "长"]
+  },
+  {
+    chinese: "如果好看就不觉得长。",
+    pinyin: "Rúguǒ hǎokàn jiù bù juéde cháng.",
+    meaning: "만약 재미있으면 그다지 길게 느껴지지 않아.",
+    words: ["如果", "好看", "就", "不", "觉得", "长"]
+  },
+  {
+    chinese: "除了看电视，还干什么？",
+    pinyin: "Chúle kàn diànshì, hái gàn shénme?",
+    meaning: "TV 시청 외에 또 무엇을 하니?",
+    words: ["除了", "看", "电视", "还", "干", "什么"]
+  },
+  {
+    chinese: "已经退休的，有的打牌，有的打麻将。",
+    pinyin: "Yǐjīng tuìxiū de, yǒu de dǎ pái, yǒu de dǎ májiàng.",
+    meaning: "이미 은퇴한 어떤 사람은 카드를 하고, 어떤 사람은 마작을 하기도 해.",
+    words: ["已经", "退休的", "有的", "打牌", "有的", "打", "麻将"]
+  },
+  {
+    chinese: "没退休的，拿我姐姐来说，她是教师。",
+    pinyin: "Méi tuìxiū de, ná wǒ jiějie lái shuō, tā shì jiàoshī.",
+    meaning: "아직 은퇴하지 않은 사람들, 우리 언니를 예로 들면 그녀는 교사야.",
+    words: ["没", "退休的", "拿", "我姐姐", "来说", "她", "是", "教师"]
+  },
+  {
+    chinese: "一般是备备课，陪孩子玩儿一会儿。",
+    pinyin: "Yìbān shì bèi bei kè, péi háizi wánr yíhuìr.",
+    meaning: "보통은 수업 준비를 좀 하거나 아이와 잠깐 놀아 줘.",
+    words: ["一般", "是", "备备课", "陪", "孩子", "玩儿", "一会儿"]
+  },
+  {
+    chinese: "再做点儿家务什么的，就差不多该睡觉了。",
+    pinyin: "Zài zuò diǎnr jiāwù shénme de, jiù chàbuduō gāi shuìjiào le.",
+    meaning: "그리고 집안일 같은 것을 좀 하면 거의 잠잘 시간이 돼.",
+    words: ["再", "做点儿", "家务", "什么的", "就", "差不多", "该", "睡觉", "了"]
+  },
+  {
+    chinese: "其他年轻人呢？",
+    pinyin: "Qítā niánqīng rén ne?",
+    meaning: "다른 젊은이들은?",
+    words: ["其他", "年轻人", "呢"]
+  },
+  {
+    chinese: "有的去逛逛街，跳跳舞，唱唱卡拉OK什么的。",
+    pinyin: "Yǒu de qù guàng guang jiē, tiào tiao wǔ, chàng chang kǎlā OK shénme de.",
+    meaning: "어떤 이들은 쇼핑하거나, 춤을 추기도 하고, 노래방에서 노래를 부르기도 해.",
+    words: ["有的", "去", "逛逛街", "跳跳舞", "唱唱", "卡拉OK", "什么的"]
+  },
+  {
+    chinese: "有的上网聊聊天儿。",
+    pinyin: "Yǒu de shàngwǎng liáo liao tiānr.",
+    meaning: "어떤 이들은 인터넷 채팅을 하기도 해.",
+    words: ["有的", "上网", "聊聊天儿"]
+  },
+  {
+    chinese: "吃完晚饭先出去散散步。",
+    pinyin: "Chī wán wǎnfàn xiān chūqù sàn san bù.",
+    meaning: "저녁을 먹은 후 먼저 밖에 나가서 산책해.",
+    words: ["吃完", "晚饭", "先", "出去", "散散步"]
+  },
+  {
+    chinese: "然后回房间复习复习白天学的新课。",
+    pinyin: "Ránhòu huí fángjiān fùxí fùxí báitiān xué de xīn kè.",
+    meaning: "그다음 방에 돌아와서 낮에 배운 새로운 과를 복습해.",
+    words: ["然后", "回", "房间", "复习复习", "白天", "学的", "新课"]
+  },
+  {
+    chinese: "有的时候给家里打打电话。",
+    pinyin: "Yǒu de shíhou gěi jiālǐ dǎ da diànhuà.",
+    meaning: "어떤 때는 집에 전화를 걸기도 해.",
+    words: ["有的时候", "给", "家里", "打打电话"]
+  },
+  {
+    chinese: "或者上上网，给朋友发发E-mail什么的。",
+    pinyin: "Huòzhě shàng shang wǎng, gěi péngyou fā fa E-mail shénme de.",
+    meaning: "또는 인터넷을 하고, 친구에게 이메일을 보내기도 해.",
+    words: ["或者", "上上网", "给", "朋友", "发发", "E-mail", "什么的"]
+  },
+  {
+    chinese: "快来听，我下载的这首歌太好听了。",
+    pinyin: "Kuài lái tīng, wǒ xiàzài de zhè shǒu gē tài hǎotīng le.",
+    meaning: "어서 와서 들어봐, 내가 다운로드 받은 이 노래가 아주 듣기 좋아.",
+    words: ["快", "来", "听", "我", "下载的", "这首歌", "太", "好听", "了"]
+  },
+  {
+    chinese: "我听听，我怎么不觉得好听？",
+    pinyin: "Wǒ tīng ting, wǒ zěnme bù juéde hǎotīng?",
+    meaning: "어디 좀 들어 보자, 나는 왜 좋다고 생각되지 않지?",
+    words: ["我", "听听", "我", "怎么", "不", "觉得", "好听"]
+  },
+  {
+    chinese: "你别这么说，你才比我大两岁。",
+    pinyin: "Nǐ bié zhème shuō, nǐ cái bǐ wǒ dà liǎng suì.",
+    meaning: "그렇게 말하지 마, 너는 나보다 겨우 두 살밖에 많지 않은걸.",
+    words: ["你", "别", "这么", "说", "你", "才", "比", "我", "大", "两岁"]
+  },
+  {
+    chinese: "难道你不喜欢流行歌曲吗？",
+    pinyin: "Nándào nǐ bù xǐhuan liúxíng gēqǔ ma?",
+    meaning: "설마 너 유행가를 안 좋아해?",
+    words: ["难道", "你", "不", "喜欢", "流行歌曲", "吗"]
+  },
+  {
+    chinese: "不太喜欢，主要是不常听。",
+    pinyin: "Bú tài xǐhuan, zhǔyào shì bù cháng tīng.",
+    meaning: "그다지 좋아하지도 않고, 중요한 건 자주 안 듣는다는 거지.",
+    words: ["不太", "喜欢", "主要", "是", "不", "常", "听"]
+  },
+  {
+    chinese: "我还是喜欢老歌。",
+    pinyin: "Wǒ háishi xǐhuan lǎo gē.",
+    meaning: "난 역시 오래된 노래가 좋아.",
+    words: ["我", "还是", "喜欢", "老歌"]
+  },
+  {
+    chinese: "以前的老歌，可好听了。",
+    pinyin: "Yǐqián de lǎo gē, kě hǎotīng le.",
+    meaning: "옛날 노래는 정말 듣기 좋아.",
+    words: ["以前的", "老歌", "可", "好听", "了"]
+  },
+  {
+    chinese: "我发现咱们俩虽然都是歌迷，可是迷的对象大不一样。",
+    pinyin: "Wǒ fāxiàn zánmen liǎ suīrán dōu shì gēmí, kěshì mí de duìxiàng dà bù yíyàng.",
+    meaning: "우리는 비록 모두 노래를 좋아하지만 좋아하는 대상은 아주 다른 것 같아.",
+    words: ["我", "发现", "咱们俩", "虽然", "都", "是", "歌迷", "可是", "迷的", "对象", "大", "不", "一样"]
+  },
+  {
+    chinese: "电影你爱看老的，歌曲也爱听老的。",
+    pinyin: "Diànyǐng nǐ ài kàn lǎo de, gēqǔ yě ài tīng lǎo de.",
+    meaning: "너는 영화도 옛날 영화를 즐겨 보고, 노래도 옛날 노래를 즐겨 듣는구나.",
+    words: ["电影", "你", "爱", "看", "老的", "歌曲", "也", "爱", "听", "老的"]
+  },
+  {
+    chinese: "我怎么对老歌就没兴趣呢？",
+    pinyin: "Wǒ zěnme duì lǎo gē jiù méi xìngqù ne?",
+    meaning: "나는 어째서 옛 노래에는 흥미가 없을까?",
+    words: ["我", "怎么", "对", "老歌", "就", "没", "兴趣", "呢"]
+  },
+  {
+    chinese: "这没什么奇怪的，客人有客人的爱好嘛。",
+    pinyin: "Zhè méi shénme qíguài de, kèrén yǒu kèrén de àihào ma.",
+    meaning: "그건 뭐 별로 이상할 것도 없지, 사람마다 각자의 기호가 있잖아.",
+    words: ["这", "没", "什么", "奇怪的", "客人", "有", "客人的", "爱好", "嘛"]
+  },
+  {
+    chinese: "不过，咱们有一点是相同的。",
+    pinyin: "Búguò, zánmen yǒu yì diǎn shì xiāngtóng de.",
+    meaning: "그렇지만 우린 한 가지는 같아.",
+    words: ["不过", "咱们", "有", "一点", "是", "相同的"]
+  },
+  {
+    chinese: "咱们都爱好音乐，对吧？",
+    pinyin: "Zánmen dōu àihào yīnyuè, duì ba?",
+    meaning: "우리는 모두 음악을 좋아한다는 거지, 그렇지?",
+    words: ["咱们", "都", "爱好", "音乐", "对", "吧"]
+  },
+  {
+    chinese: "下班回家，我不是在厨房，就是在书房。",
+    pinyin: "Xiàbān huí jiā, wǒ bú shì zài chúfáng, jiù shì zài shūfáng.",
+    meaning: "퇴근하고 집에 돌아오면 저는 주방에 있거나 서재에 있습니다.",
+    words: ["下班", "回家", "我", "不是", "在", "厨房", "就是", "在", "书房"]
+  },
+  {
+    chinese: "我有两大爱好，一动一静，一个是做饭，一个是看书。",
+    pinyin: "Wǒ yǒu liǎng dà àihào, yí dòng yí jìng, yí ge shì zuò fàn, yí ge shì kàn shū.",
+    meaning: "저에게는 두 가지 큰 취미가 있는데, 하나는 동적이고 하나는 정적인 것으로, 하나는 요리이고 하나는 독서입니다.",
+    words: ["我", "有", "两大", "爱好", "一动一静", "一个", "是", "做饭", "一个", "是", "看书"]
+  },
+  {
+    chinese: "做饭可以活动身体，看书可以丰富知识。",
+    pinyin: "Zuò fàn kěyǐ huódòng shēntǐ, kàn shū kěyǐ fēngfù zhīshi.",
+    meaning: "요리를 하면 몸을 움직일 수 있고, 독서는 지식을 풍부하게 해 줍니다.",
+    words: ["做饭", "可以", "活动", "身体", "看书", "可以", "丰富", "知识"]
+  },
+  {
+    chinese: "怎么样？挺科学吧？",
+    pinyin: "Zěnmeyàng? Tǐng kēxué ba?",
+    meaning: "어떤가요? 꽤 과학적이지 않나요?",
+    words: ["怎么样", "挺", "科学", "吧"]
+  },
+  {
+    chinese: "你说我应该出去晒晒太阳？",
+    pinyin: "Nǐ shuō wǒ yīnggāi chūqù shài shai tàiyáng?",
+    meaning: "제가 밖으로 나가서 햇빛을 좀 받아야 한다고요?",
+    words: ["你", "说", "我", "应该", "出去", "晒晒", "太阳"]
+  },
+  {
+    chinese: "不用出去。",
+    pinyin: "Búyòng chūqù.",
+    meaning: "밖에 나갈 필요가 없습니다.",
+    words: ["不用", "出去"]
+  },
+  {
+    chinese: "坐在我家的阳台上，一边晒太阳，一边看书，那才舒服呢！",
+    pinyin: "Zuò zài wǒ jiā de yángtái shang, yìbiān shài tàiyáng, yìbiān kàn shū, nà cái shūfu ne!",
+    meaning: "우리 집 베란다에 앉아서 한편으로는 햇볕을 쬐고, 한편으로는 책을 보면 그게 정말 편안합니다!",
+    words: ["坐在", "我家的", "阳台上", "一边", "晒太阳", "一边", "看书", "那", "才", "舒服", "呢"]
+  },
+  {
+    chinese: "有的年轻人特别喜欢名牌。",
+    pinyin: "Yǒu de niánqīng rén tèbié xǐhuan míngpái.",
+    meaning: "어떤 젊은이들은 특히 명품을 좋아한다.",
+    words: ["有的", "年轻人", "特别", "喜欢", "名牌"]
+  },
+  {
+    chinese: "拿小王来说，他穿的，用的都是名牌。",
+    pinyin: "Ná Xiǎo Wáng lái shuō, tā chuān de, yòng de dōu shì míngpái.",
+    meaning: "샤오왕을 예로 들면, 그가 입는 것과 쓰는 것은 모두 명품이다.",
+    words: ["拿", "小王", "来说", "他", "穿的", "用的", "都", "是", "名牌"]
+  },
+  {
+    chinese: "难道有困难就不学了吗？",
+    pinyin: "Nándào yǒu kùnnan jiù bù xué le ma?",
+    meaning: "설마 어렵다고 배우지 않을까?",
+    words: ["难道", "有", "困难", "就", "不", "学", "了", "吗"]
+  },
+  {
+    chinese: "难道不吃药，不打针病就能好了不成？",
+    pinyin: "Nándào bù chī yào, bù dǎ zhēn bìng jiù néng hǎo le bùchéng?",
+    meaning: "설마 약도 안 먹고 주사도 맞지 않았는데 병이 나을 수 있겠는가?",
+    words: ["难道", "不", "吃药", "不", "打针", "病", "就", "能", "好", "了", "不成"]
+  },
+  {
+    chinese: "不论下雨或者刮风，他都骑自行车上班。",
+    pinyin: "Búlùn xià yǔ huòzhě guā fēng, tā dōu qí zìxíngchē shàngbān.",
+    meaning: "비가 오든 바람이 불든 그는 모두 자전거를 타고 출근한다.",
+    words: ["不论", "下雨", "或者", "刮风", "他", "都", "骑", "自行车", "上班"]
+  },
+  {
+    chinese: "学历史还是学文学？",
+    pinyin: "Xué lìshǐ háishi xué wénxué?",
+    meaning: "역사를 배울까 아니면 문학을 배울까?",
+    words: ["学", "历史", "还是", "学", "文学"]
+  },
+  {
+    chinese: "我不知道学文学好还是学历史好。",
+    pinyin: "Wǒ bù zhīdao xué wénxué hǎo háishi xué lìshǐ hǎo.",
+    meaning: "나는 문학을 배우는 것이 좋을지 역사를 배우는 것이 좋을지 모르겠다.",
+    words: ["我", "不知道", "学", "文学", "好", "还是", "学", "历史", "好"]
+  },
+  {
+    chinese: "你今天来或者明天来都行。",
+    pinyin: "Nǐ jīntiān lái huòzhě míngtiān lái dōu xíng.",
+    meaning: "네가 오늘 오든 내일 오든 다 괜찮다.",
+    words: ["你", "今天", "来", "或者", "明天", "来", "都", "行"]
+  },
+  {
+    chinese: "我们每天不是上课就是考试，忙得很。",
+    pinyin: "Wǒmen měitiān bú shì shàngkè jiù shì kǎoshì, máng de hěn.",
+    meaning: "우리는 매일 수업이 아니면 시험을 봐서 아주 바쁘다.",
+    words: ["我们", "每天", "不是", "上课", "就是", "考试", "忙得", "很"]
+  },
+  {
+    chinese: "食堂的饭不是馒头就是米饭，我想吃点儿别的。",
+    pinyin: "Shítáng de fàn bú shì mántou jiù shì mǐfàn, wǒ xiǎng chī diǎnr bié de.",
+    meaning: "식당의 밥은 만터우가 아니면 밥이라서 나는 다른 것을 좀 먹고 싶다.",
+    words: ["食堂的", "饭", "不是", "馒头", "就是", "米饭", "我", "想", "吃点儿", "别的"]
+  },
+  {
+    chinese: "除了上网，还喜欢什么？",
+    pinyin: "Chúle shàngwǎng, hái xǐhuan shénme?",
+    meaning: "인터넷 하는 것 외에 또 무엇을 좋아하니?",
+    words: ["除了", "上网", "还", "喜欢", "什么"]
+  },
+  {
+    chinese: "除了夸你帅，还夸你唱歌好听。",
+    pinyin: "Chúle kuā nǐ shuài, hái kuā nǐ chànggē hǎotīng.",
+    meaning: "너를 잘생겼다고 칭찬한 것 외에 노래를 잘한다고도 칭찬했다.",
+    words: ["除了", "夸", "你", "帅", "还", "夸", "你", "唱歌", "好听"]
+  },
+  {
+    chinese: "留学生有的住校内，有的住校外。",
+    pinyin: "Liúxuéshēng yǒu de zhù xiào nèi, yǒu de zhù xiào wài.",
+    meaning: "유학생 중 어떤 사람은 교내에 살고 어떤 사람은 교외에 산다.",
+    words: ["留学生", "有的", "住", "校内", "有的", "住", "校外"]
+  },
+  {
+    chinese: "服务员有的服务热情，有的服务不热情。",
+    pinyin: "Fúwùyuán yǒu de fúwù rèqíng, yǒu de fúwù bù rèqíng.",
+    meaning: "종업원 중 어떤 사람은 서비스가 친절하고 어떤 사람은 친절하지 않다.",
+    words: ["服务员", "有的", "服务", "热情", "有的", "服务", "不", "热情"]
+  },
+  {
+    chinese: "每个国家有每个国家的法律。",
+    pinyin: "Měi ge guójiā yǒu měi ge guójiā de fǎlǜ.",
+    meaning: "모든 나라에는 각 나라의 법률이 있다.",
+    words: ["每个", "国家", "有", "每个", "国家的", "法律"]
+  },
+  {
+    chinese: "每个民族有每个民族的传统。",
+    pinyin: "Měi ge mínzú yǒu měi ge mínzú de chuántǒng.",
+    meaning: "모든 민족에게는 각 민족마다의 전통이 있다.",
+    words: ["每个", "民族", "有", "每个", "民族的", "传统"]
+  },
+  {
+    chinese: "每个城市有每个城市的特色。",
+    pinyin: "Měi ge chéngshì yǒu měi ge chéngshì de tèsè.",
+    meaning: "모든 도시는 각 도시의 특색이 있다.",
+    words: ["每个", "城市", "有", "每个", "城市的", "特色"]
+  },
+    {
+    chinese: "谁爱吃什么就取什么。",
+    pinyin: "Shéi ài chī shénme jiù qǔ shénme.",
+    meaning: "누구든 먹고 싶은 것을 가져다 먹어.",
+    words: ["谁", "爱", "吃", "什么", "就", "取", "什么"]
+  },
+  {
+    chinese: "咱们刚搬了新房子，请朋友们来聚聚，吃顿饭吧？",
+    pinyin: "Zánmen gāng bān le xīn fángzi, qǐng péngyoumen lái jù ju, chī dùn fàn ba?",
+    meaning: "우리 막 새집으로 이사했는데, 친구들을 불러 모여서 식사 한 끼 할까요?",
+    words: ["咱们", "刚", "搬了", "新房子", "请", "朋友们", "来", "聚聚", "吃", "顿", "饭", "吧"]
+  },
+  {
+    chinese: "好啊，我建议来个自助餐。",
+    pinyin: "Hǎo a, wǒ jiànyì lái ge zìzhùcān.",
+    meaning: "좋지요, 나는 뷔페 형식을 추천해요.",
+    words: ["好啊", "我", "建议", "来个", "自助餐"]
+  },
+  {
+    chinese: "准备一些凉菜，再做几个热菜。",
+    pinyin: "Zhǔnbèi yìxiē liángcài, zài zuò jǐ ge rècài.",
+    meaning: "냉채 몇 가지를 준비하고, 다시 따뜻한 요리도 몇 가지 할게요.",
+    words: ["准备", "一些", "凉菜", "再", "做", "几个", "热菜"]
+  },
+  {
+    chinese: "要准备酒吗？",
+    pinyin: "Yào zhǔnbèi jiǔ ma?",
+    meaning: "술을 준비해야 할까요?",
+    words: ["要", "准备", "酒", "吗"]
+  },
+  {
+    chinese: "当然得准备了。",
+    pinyin: "Dāngrán děi zhǔnbèi le.",
+    meaning: "당연히 준비해야죠.",
+    words: ["当然", "得", "准备", "了"]
+  },
+  {
+    chinese: "除了啤酒，再来点儿葡萄酒什么的。",
+    pinyin: "Chúle píjiǔ, zài lái diǎnr pútáojiǔ shénme de.",
+    meaning: "맥주 외에 와인 같은 것도 좀 두죠.",
+    words: ["除了", "啤酒", "再", "来", "点儿", "葡萄酒", "什么的"]
+  },
+  {
+    chinese: "要不要白酒？",
+    pinyin: "Yào bú yào báijiǔ?",
+    meaning: "바이주는 필요할까요?",
+    words: ["要不要", "白酒"]
+  },
+  {
+    chinese: "不要了吧？",
+    pinyin: "Bú yào le ba?",
+    meaning: "필요 없겠죠?",
+    words: ["不要", "了", "吧"]
+  },
+  {
+    chinese: "白酒太厉害，喝了容易醉。",
+    pinyin: "Báijiǔ tài lìhai, hē le róngyì zuì.",
+    meaning: "바이주는 너무 세서 마시면 쉽게 취해요.",
+    words: ["白酒", "太", "厉害", "喝了", "容易", "醉"]
+  },
+  {
+    chinese: "你怎么不吃啊？",
+    pinyin: "Nǐ zěnme bù chī a?",
+    meaning: "너는 어째서 안 먹니?",
+    words: ["你", "怎么", "不", "吃", "啊"]
+  },
+  {
+    chinese: "我早上起得晚，还不太饿。",
+    pinyin: "Wǒ zǎoshang qǐ de wǎn, hái bú tài è.",
+    meaning: "난 아침에 늦게 일어나서 아직 별로 배가 고프지 않아.",
+    words: ["我", "早上", "起得", "晚", "还", "不太", "饿"]
+  },
+  {
+    chinese: "你是不是在减肥？",
+    pinyin: "Nǐ shì bú shì zài jiǎnféi?",
+    meaning: "다이어트 하는 거 아니니?",
+    words: ["你", "是不是", "在", "减肥"]
+  },
+  {
+    chinese: "你别笑话我。",
+    pinyin: "Nǐ bié xiàohua wǒ.",
+    meaning: "나를 비웃지 마.",
+    words: ["你", "别", "笑话", "我"]
+  },
+  {
+    chinese: "这几个月我又长了好几斤，越来越胖了。",
+    pinyin: "Zhè jǐ ge yuè wǒ yòu zhǎng le hǎo jǐ jīn, yuè lái yuè pàng le.",
+    meaning: "최근 몇 개월 동안 내가 또 몇 근이나 쪄서 갈수록 뚱뚱해지고 있어.",
+    words: ["这几个月", "我", "又", "长了", "好几斤", "越来越", "胖", "了"]
+  },
+  {
+    chinese: "你哪儿胖啊？身材多好啊！",
+    pinyin: "Nǐ nǎr pàng a? Shēncái duō hǎo a!",
+    meaning: "네가 어디가 뚱뚱한데? 몸매가 얼마나 좋은데!",
+    words: ["你", "哪儿", "胖", "啊", "身材", "多", "好", "啊"]
+  },
+  {
+    chinese: "我真羡慕你，吃什么都长不胖。",
+    pinyin: "Wǒ zhēn xiànmù nǐ, chī shénme dōu zhǎng bú pàng.",
+    meaning: "난 네가 정말 부러워, 너는 뭘 먹어도 살이 안 찌잖아.",
+    words: ["我", "真", "羡慕", "你", "吃", "什么", "都", "长不胖"]
+  },
+  {
+    chinese: "有口福啊！",
+    pinyin: "Yǒu kǒufú a!",
+    meaning: "정말 먹을 복이 있어!",
+    words: ["有", "口福", "啊"]
+  },
+  {
+    chinese: "我觉得健康是最重要的。",
+    pinyin: "Wǒ juéde jiànkāng shì zuì zhòngyào de.",
+    meaning: "난 건강이 가장 중요하다고 생각해.",
+    words: ["我", "觉得", "健康", "是", "最", "重要", "的"]
+  },
+  {
+    chinese: "胖瘦都是给别人看的。",
+    pinyin: "Pàng shòu dōu shì gěi biérén kàn de.",
+    meaning: "뚱뚱하고 마른 것은 모두 남에게 보여 주기 위한 거잖아.",
+    words: ["胖瘦", "都", "是", "给", "别人", "看", "的"]
+  },
+  {
+    chinese: "身体好，自己觉得舒服比什么都强。",
+    pinyin: "Shēntǐ hǎo, zìjǐ juéde shūfu bǐ shénme dōu qiáng.",
+    meaning: "몸이 건강하고 스스로 편하게 느끼는 것이 무엇보다 중요해.",
+    words: ["身体", "好", "自己", "觉得", "舒服", "比", "什么", "都", "强"]
+  },
+  {
+    chinese: "放心地吃吧。",
+    pinyin: "Fàngxīn de chī ba.",
+    meaning: "맘 놓고 먹어.",
+    words: ["放心地", "吃", "吧"]
+  },
+  {
+    chinese: "饿瘦了，脸色也不好了。",
+    pinyin: "È shòu le, liǎnsè yě bù hǎo le.",
+    meaning: "배고파서 훌쭉해지면 안색도 안 좋아져.",
+    words: ["饿瘦了", "脸色", "也", "不好", "了"]
+  },
+  {
+    chinese: "要是真想瘦一点儿，最好的办法是运动。",
+    pinyin: "Yàoshi zhēn xiǎng shòu yìdiǎnr, zuì hǎo de bànfǎ shì yùndòng.",
+    meaning: "만약 정말 조금 날씬해지고 싶다면 가장 좋은 방법은 운동이야.",
+    words: ["要是", "真", "想", "瘦", "一点儿", "最好的", "办法", "是", "运动"]
+  },
+  {
+    chinese: "我也知道，可是天天坚持不容易。",
+    pinyin: "Wǒ yě zhīdào, kěshì tiāntiān jiānchí bù róngyì.",
+    meaning: "나도 알아, 하지만 매일 꾸준히 한다는 게 쉽지 않아.",
+    words: ["我", "也", "知道", "可是", "天天", "坚持", "不", "容易"]
+  },
+  {
+    chinese: "一停下来，会更胖。",
+    pinyin: "Yì tíng xiàlai, huì gèng pàng.",
+    meaning: "한번 그만두면 더 뚱뚱해질 거야.",
+    words: ["一", "停下来", "会", "更", "胖"]
+  },
+  {
+    chinese: "中国和美国的饮食习惯很不一样吧？",
+    pinyin: "Zhōngguó hé Měiguó de yǐnshí xíguàn hěn bù yíyàng ba?",
+    meaning: "중국과 미국은 음식 습관이 아주 다르지?",
+    words: ["中国", "和", "美国的", "饮食习惯", "很", "不一样", "吧"]
+  },
+  {
+    chinese: "是，很不一样。",
+    pinyin: "Shì, hěn bù yíyàng.",
+    meaning: "응, 아주 달라.",
+    words: ["是", "很", "不一样"]
+  },
+  {
+    chinese: "我喜欢吃中餐，可是有的时候很不习惯。",
+    pinyin: "Wǒ xǐhuan chī Zhōngcān, kěshì yǒu de shíhou hěn bù xíguàn.",
+    meaning: "나는 중국 음식을 좋아하지만 어떤 경우에는 정말 익숙하지 않아.",
+    words: ["我", "喜欢", "吃", "中餐", "可是", "有的时候", "很", "不", "习惯"]
+  },
+  {
+    chinese: "比如说。",
+    pinyin: "Bǐrú shuō.",
+    meaning: "예를 든다면.",
+    words: ["比如说"]
+  },
+  {
+    chinese: "喝酒的时候，主人太热情，总是让我喝。",
+    pinyin: "Hē jiǔ de shíhou, zhǔrén tài rèqíng, zǒngshì ràng wǒ hē.",
+    meaning: "술을 마실 때 주인이 너무 친절해서 늘 나에게 마시라고 해.",
+    words: ["喝酒的时候", "主人", "太", "热情", "总是", "让", "我", "喝"]
+  },
+  {
+    chinese: "我常常不好意思不喝，有时候就喝多了。",
+    pinyin: "Wǒ chángcháng bù hǎoyìsi bù hē, yǒu shíhou jiù hē duō le.",
+    meaning: "나는 종종 안 마시기가 미안해서 어떤 때는 너무 많이 마셔.",
+    words: ["我", "常常", "不好意思", "不", "喝", "有时候", "就", "喝多了"]
+  },
+  {
+    chinese: "这时候，只要你告诉他们你不能喝酒。",
+    pinyin: "Zhè shíhou, zhǐyào nǐ gàosu tāmen nǐ bù néng hē jiǔ.",
+    meaning: "이럴 때 네가 그들에게 술을 못 마신다고 말하기만 하면 돼.",
+    words: ["这时候", "只要", "你", "告诉", "他们", "你", "不能", "喝酒"]
+  },
+  {
+    chinese: "他们不一定非让你喝不可。",
+    pinyin: "Tāmen bù yídìng fēi ràng nǐ hē bùkě.",
+    meaning: "그들이 반드시 너에게 마시지 않으면 안 된다고 하지는 않을 거야.",
+    words: ["他们", "不一定", "非", "让", "你", "喝", "不可"]
+  },
+  {
+    chinese: "如果我是你，我就说谢谢，我不会喝酒。",
+    pinyin: "Rúguǒ wǒ shì nǐ, wǒ jiù shuō xièxie, wǒ bú huì hē jiǔ.",
+    meaning: "내가 만약 너라면 감사합니다, 저는 술을 잘 못합니다라고 말할 거야.",
+    words: ["如果", "我", "是", "你", "我", "就", "说", "谢谢", "我", "不会", "喝酒"]
+  },
+  {
+    chinese: "或者说，我只能少来一点儿。",
+    pinyin: "Huòzhě shuō, wǒ zhǐ néng shǎo lái yìdiǎnr.",
+    meaning: "혹은 저는 조금밖에 마시지 못합니다라고 말할 거야.",
+    words: ["或者", "说", "我", "只能", "少", "来", "一点儿"]
+  },
+  {
+    chinese: "好吧，以后我试试。",
+    pinyin: "Hǎo ba, yǐhòu wǒ shì shi.",
+    meaning: "알겠어, 나중에 해 볼게.",
+    words: ["好吧", "以后", "我", "试试"]
+  },
+  {
+    chinese: "我去过美国。",
+    pinyin: "Wǒ qù guo Měiguó.",
+    meaning: "나는 미국에 가 본 적이 있어.",
+    words: ["我", "去过", "美国"]
+  },
+  {
+    chinese: "我不习惯用刀叉。",
+    pinyin: "Wǒ bù xíguàn yòng dāochā.",
+    meaning: "나는 나이프와 포크를 사용하는 게 익숙하지 않아.",
+    words: ["我", "不", "习惯", "用", "刀叉"]
+  },
+  {
+    chinese: "左手拿叉，右手拿刀，切肉切菜，实在麻烦。",
+    pinyin: "Zuǒshǒu ná chā, yòushǒu ná dāo, qiē ròu qiē cài, shízài máfan.",
+    meaning: "왼손으로 포크를 들고 오른손으로 나이프를 들고 고기와 채소를 자르려니 정말 불편했어.",
+    words: ["左手", "拿", "叉", "右手", "拿", "刀", "切", "肉", "切", "菜", "实在", "麻烦"]
+  },
+  {
+    chinese: "吃鸡，吃鱼，吃面条儿，就更困难了。",
+    pinyin: "Chī jī, chī yú, chī miàntiáor, jiù gèng kùnnan le.",
+    meaning: "닭, 생선, 국수를 먹는 것은 더 어려웠어.",
+    words: ["吃", "鸡", "吃", "鱼", "吃", "面条儿", "就", "更", "困难", "了"]
+  },
+  {
+    chinese: "这就跟我们不习惯用筷子一样。",
+    pinyin: "Zhè jiù gēn wǒmen bù xíguàn yòng kuàizi yíyàng.",
+    meaning: "그건 우리가 젓가락 사용하는 게 익숙하지 않은 것과 같네.",
+    words: ["这", "就", "跟", "我们", "不", "习惯", "用", "筷子", "一样"]
+  },
+  {
+    chinese: "不练不行。",
+    pinyin: "Bú liàn bù xíng.",
+    meaning: "연습하지 않으면 안 돼.",
+    words: ["不", "练", "不", "行"]
+  },
+  {
+    chinese: "你们吃早饭的习惯也和我们不太一样。",
+    pinyin: "Nǐmen chī zǎofàn de xíguàn yě hé wǒmen bú tài yíyàng.",
+    meaning: "너희의 아침 식사 습관도 우리와 별로 같지 않아.",
+    words: ["你们", "吃", "早饭的", "习惯", "也", "和", "我们", "不太", "一样"]
+  },
+  {
+    chinese: "你们喜欢吃面包。",
+    pinyin: "Nǐmen xǐhuan chī miànbāo.",
+    meaning: "너희는 빵을 즐겨 먹어.",
+    words: ["你们", "喜欢", "吃", "面包"]
+  },
+  {
+    chinese: "喝从冰箱里刚拿出来的凉牛奶。",
+    pinyin: "Hē cóng bīngxiāng li gāng ná chūlai de liáng niúnǎi.",
+    meaning: "냉장고에서 막 꺼낸 차가운 우유를 마셔.",
+    words: ["喝", "从", "冰箱里", "刚", "拿出来的", "凉", "牛奶"]
+  },
+  {
+    chinese: "同时，还要喝一些果汁。",
+    pinyin: "Tóngshí, hái yào hē yìxiē guǒzhī.",
+    meaning: "동시에 과일 주스도 좀 마시잖아.",
+    words: ["同时", "还", "要", "喝", "一些", "果汁"]
+  },
+  {
+    chinese: "我的肚子就受不了。",
+    pinyin: "Wǒ de dùzi jiù shòu bù liǎo.",
+    meaning: "내 배는 견디지 못할 거야.",
+    words: ["我的", "肚子", "就", "受不了"]
+  },
+  {
+    chinese: "我习惯喝热豆浆，吃油条，再来一个煮鸡蛋。",
+    pinyin: "Wǒ xíguàn hē rè dòujiāng, chī yóutiáo, zài lái yí ge zhǔ jīdàn.",
+    meaning: "나는 따뜻한 더우장을 마시고, 여우탸오를 먹고, 또 삶은 달걀 하나를 먹는 데 익숙해.",
+    words: ["我", "习惯", "喝", "热", "豆浆", "吃", "油条", "再", "来", "一个", "煮鸡蛋"]
   }
 ];
 
