@@ -2644,8 +2644,6 @@ if (!textToRead) {
   return;
 }
 
-alert("읽을 문장: " + textToRead);
-
 window.speechSynthesis.cancel();
   window.speechSynthesis.cancel();
 
