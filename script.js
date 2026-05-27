@@ -2205,16 +2205,16 @@ function startQuiz(mode) {
   score = 0;
   wrongAnswers = [];
 
-  const filteredData = filterByLesson(quizData);
+  const filteredWordData = filterByLesson(quizData);
 
-  if (selectedLessons.length === 0 || filteredData.length === 0) {
+  if (selectedLessons.length === 0 || filteredWordData.length === 0) {
     alert("출제 범위를 하나 이상 선택해줘!");
     return;
   }
 
-  shuffledQuizData = shuffleArray([...filteredData]).slice(
+  shuffledQuizData = shuffleArray([...filteredWordData]).slice(
     0,
-    Math.min(questionCount, filteredData.length)
+    Math.min(questionCount, filteredWordData.length)
   );
 
   document.getElementById("mode-box").style.display = "none";
@@ -2489,48 +2489,6 @@ function startOrderQuiz() {
     0,
     Math.min(orderQuestionCount, orderQuizData.length)
   );
-
-  document.getElementById("mode-box").style.display = "none";
-  document.getElementById("quiz-area").style.display = "block";
-
-  document.getElementById("score").textContent = "점수: 0";
-  document.getElementById("next-button").textContent = "다음 문제";
-  document.getElementById("next-button").onclick = nextQuestion;
-  document.getElementById("next-button").style.display = "none";
-  document.getElementById("home-button").style.display = "block";
-
-  showOrderQuestion();
-}
-
-const filteredSentenceData = filterByLesson(sentenceData);
-
-if (selectedLessons.length === 0 || filteredSentenceData.length === 0) {
-  alert("출제 범위를 하나 이상 선택해줘!");
-  return;
-}
-
-orderQuizData = filteredSentenceData.filter(item => item.words && item.words.length > 0);
-
-if (orderQuizData.length === 0) {
-  alert("선택한 범위에 순서 배열 문제가 없어!");
-  return;
-}
-
-shuffledQuizData = shuffleArray([...orderQuizData]).slice(0, Math.min(orderQuestionCount, orderQuizData.length));
-
-if (orderQuizData.length === 0) {
-  alert("선택한 범위에 순서 배열 문제가 없어!");
-  return;
-}
-
-const filteredData = filterByLesson(quizData);
-
-if (selectedLessons.length === 0 || filteredData.length === 0) {
-  alert("출제 범위를 하나 이상 선택해줘!");
-  return;
-}
-
-shuffledQuizData = shuffleArray([...filteredData]).slice(0, Math.min(questionCount, filteredData.length));
 
   document.getElementById("mode-box").style.display = "none";
   document.getElementById("quiz-area").style.display = "block";
