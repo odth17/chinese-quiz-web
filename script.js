@@ -846,6 +846,7 @@ let shuffledQuizData = [];
 let currentMode = "meaning";
 let wrongAnswers = [];
 const questionCount = 15;
+const orderQuestionCount = 15;
 
 function shuffleArray(array) {
   return array.sort(() => Math.random() - 0.5);
@@ -1080,8 +1081,7 @@ function startSentenceQuiz(mode) {
   score = 0;
   wrongAnswers = [];
 
-  shuffledQuizData = shuffleArray([...sentenceData]).slice(0, Math.min(questionCount, sentenceData.length));
-
+  shuffledQuizData = shuffleArray([...orderQuizData]).slice(0, Math.min(orderQuestionCount, orderQuizData.length));
   document.getElementById("mode-box").style.display = "none";
   document.getElementById("quiz-area").style.display = "block";
 
