@@ -2639,7 +2639,14 @@ function playCurrentAudio() {
     alert("읽을 중국어 문장이 없습니다.");
     return;
   }
+if (!textToRead) {
+  alert("읽을 중국어 문장이 없습니다.");
+  return;
+}
 
+alert("읽을 문장: " + textToRead);
+
+window.speechSynthesis.cancel();
   window.speechSynthesis.cancel();
 
   const utterance = new SpeechSynthesisUtterance(textToRead);
