@@ -110,3 +110,14 @@ button:disabled {
   min-width: 70px;
   padding: 12px 16px;
 }
+.selected-word-button {
+  width: auto;
+  min-width: 60px;
+  margin: 5px;
+  padding: 10px 14px;
+  background-color: #dff5e1;
+}
+
+.selected-word-button:hover {
+  background-color: #c8edcc;
+}
